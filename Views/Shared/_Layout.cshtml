@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Url.Content("~/css/style.css")" rel="stylesheet" />
+    <title>Ctulhu</title>
+</head>
+<body>
+    <header>
+        <a href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/img/icon.png")" class="logo"></a>
+        <nav class="navigation">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Домой</a></li>
+                <li>
+                    <a href="#">Рецепты</a>
+                    <ul>
+                        <li><a href="#">Настойки</a></li>
+                        <li><a href="#">Зелья</a></li>
+                        <li><a href="#">Лекарства</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Полезные статьи</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+        <a href="@Url.Action("Login", "Login")"><img src="@Url.Content("~/img/profile.png")" class="profile"></a>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div>
+            <h1>Разработано в рамках учебного проекта</h1>
+            <h2>Андрей Воркунов 107в2</h2>
+        </div>
+    </footer>
+</body>
+</html>

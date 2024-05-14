@@ -1,0 +1,30 @@
+﻿@using Ctulhu.Models
+@model List<Users>
+
+<div style="display: inline-block;">
+    <section class="post">
+        <h1>Hello world</h1>
+        <img src="img/b3.jpg" width="300px">
+    </section>
+
+    <section class="post">
+        <h2>ererge</h2>
+        <h2>ererge</h2>
+        <h2>ererge</h2>
+        <h2>ererge</h2>
+        <h2>ererge</h2>
+        <h2>ererge</h2>
+        <h2>ererge</h2>
+    </section>
+
+    <section>
+        @foreach(var user in Model)
+        {
+            <h1>@user.Users_ID</h1>
+            <h1>@user.Users_Login</h1>
+            <h1>@user.Users_Email</h1>
+            <h1>@user.Users_Password</h1>
+            <h1>@user.Users_Role</h1>
+        }
+    </section>
+</div>

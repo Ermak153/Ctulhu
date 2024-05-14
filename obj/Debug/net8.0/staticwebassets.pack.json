@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\b3.jpg",
+      "PackagePath": "staticwebassets\\img\\b3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\backimg.jpg",
+      "PackagePath": "staticwebassets\\img\\backimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\icon.png",
+      "PackagePath": "staticwebassets\\img\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\icon.svg",
+      "PackagePath": "staticwebassets\\img\\icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\path3.svg",
+      "PackagePath": "staticwebassets\\img\\path3.svg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\profile — копия.png",
+      "PackagePath": "staticwebassets\\img\\profile — копия.png"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\profile.png",
+      "PackagePath": "staticwebassets\\img\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\profile_121261.png",
+      "PackagePath": "staticwebassets\\img\\profile_121261.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ctulhu.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Ctulhu.props",
+      "PackagePath": "build\\Ctulhu.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Ctulhu.props",
+      "PackagePath": "buildMultiTargeting\\Ctulhu.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Ctulhu.props",
+      "PackagePath": "buildTransitive\\Ctulhu.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
