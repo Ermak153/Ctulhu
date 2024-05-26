@@ -2,25 +2,24 @@
 {
     public class Users
     {
+        public Users() { }
         public Users(string login, string email, string password, string role)
         {
-            Users_Login = login;
-            Users_Email = email;
-            Users_Password = password;
-            Users_Role = role;
+            Login = login;
+            Email = email;
+            Password = password;
+            Role = role;
         }
 
-        public Users() { }
-
-        public int Users_ID { get; set; }
-        public string Users_Login { get; set; }
-        public string Users_Email { get; set; }
-        public string Users_Password { get; set; }
-        public string Users_Role { get; set;}
+        public int ID { get; set; }
+        public string Login { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
 
         public override string ToString()
         {
-            return $"Id:{Users_ID} Login:{Users_Login} Email:{Users_Email} Password:{Users_Password} Role:{Users_Role}";
+            return $"Id:{ID} Login:{Login} Email: {Email} Password:{Password} Role:{Role}";
         }
     }
 }

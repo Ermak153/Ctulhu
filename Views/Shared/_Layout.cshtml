@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="@Url.Content("~/css/style.css")" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
     <title>Ctulhu</title>
 </head>
 <body>
@@ -26,12 +30,13 @@
                 <li><a href="#">О нас</a></li>
             </ul>
         </nav>
-        <a href="@Url.Action("Login", "Login")"><img src="@Url.Content("~/img/profile.png")" class="profile"></a>
+        <a href="@Url.Action("Registration", "Login")"><img src="@Url.Content("~/img/profile.png")" class="profile"></a>
     </header>
 
     <main>
         @RenderBody()
     </main>
+
 
     <footer>
         <div>
@@ -39,5 +44,10 @@
             <h2>Андрей Воркунов 107в2</h2>
         </div>
     </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,42 @@
+﻿@model Ctulhu.Models.UserProfile
+
+<div class="profile">
+    <h1>Профиль пользователя</h1>
+    <form asp-action="Profile" method="post">
+        <div>
+            <label asp-for="Login"></label>
+            <input asp-for="Login" readonly />
+            <span asp-validation-for="Login" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="OldPassword">Старый пароль</label>
+            <input asp-for="OldPassword" type="password" />
+            <span asp-validation-for="OldPassword" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Password">Новый пароль</label>
+            <input asp-for="Password" type="password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="ConfirmPassword">Подтвердите новый пароль</label>
+            <input asp-for="ConfirmPassword" type="password" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+        <button type="submit">Сохранить изменения</button>
+    </form>
+    <form asp-action="Logout" method="post">
+        <button type="submit">Выйти</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

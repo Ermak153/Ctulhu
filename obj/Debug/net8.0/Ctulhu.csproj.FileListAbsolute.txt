@@ -132,3 +132,14 @@ C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\runtimes\win\lib\net6.0\Syst
 C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\ermak\source\repos\Ctulhu\obj\Debug\net8.0\Ctulhu.csproj.AssemblyReference.cache
 C:\Users\ermak\source\repos\Ctulhu\obj\Debug\net8.0\Ctulhu.csproj.Up2Date
+C:\Users\ermak\source\repos\Ctulhu\obj\Debug\net8.0\Ctulhu.sourcelink.json
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.Owin.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.Owin.Security.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Owin.dll
+C:\Users\ermak\source\repos\Ctulhu\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
