@@ -23,7 +23,7 @@ namespace Ctulhu.Controllers
         public async Task<IActionResult> Index()
         {
             var users = await _context._users.ToListAsync();
-            var posts = await _context._posts.ToListAsync();
+            var posts = await _context._posts.Where(p => p.IsApproved).ToListAsync();
             var model = new UserPosts { Users = users, Posts = posts };
             return View(model);
         }
@@ -41,7 +41,8 @@ namespace Ctulhu.Controllers
             {
                 Title = Title,
                 Description = Description,
-                Author = user.Login // Assuming you have an Author property in Posts model
+                Author = user.Login,
+                IsApproved = false // Новые посты по умолчанию не одобрены
             };
 
             _context._posts.Add(post);

@@ -1,1 +1,38 @@
-﻿<h1>HUI</h1>
+﻿@model IEnumerable<Ctulhu.Models.Posts>
+
+<h1>Панель администратора</h1>
+
+<li class="nav-item">
+    <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Users">Управление пользователями</a>
+</li>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Заголовок</th>
+            <th>Описание</th>
+            <th>Автор</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Title</td>
+                <td>@post.Description</td>
+                <td>@post.Author</td>
+                <td>
+                    <form asp-action="Approve" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@post.ID" />
+                        <button type="submit" class="btn btn-success">Одобрить</button>
+                    </form>
+                    <form asp-action="Reject" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@post.ID" />
+                        <button type="submit" class="btn btn-danger">Отклонить</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

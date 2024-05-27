@@ -33,6 +33,13 @@
     <form asp-action="Logout" method="post">
         <button type="submit">Выйти</button>
     </form>
+
+    @if (User.IsInRole("admin"))
+    {
+        <p>
+            <a href="@Url.Action("Admin", "Admin")">Перейти в панель администратора</a>
+        </p>
+    }
 </div>
 
 @section Scripts {

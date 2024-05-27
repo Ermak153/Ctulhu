@@ -1,0 +1,31 @@
+﻿@model Ctulhu.Models.Users
+
+<h1>Редактирование пользователя</h1>
+
+<form asp-action="EditUser" method="post">
+    <input type="hidden" asp-for="ID" />
+    <div>
+        <label asp-for="Login"></label>
+        <input asp-for="Login" />
+        <span asp-validation-for="Login" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Role"></label>
+        <select asp-for="Role" class="form-control">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <span asp-validation-for="Role" class="text-danger"></span>
+    </div>
+    <button type="submit">Сохранить</button>
+</form>

@@ -54,7 +54,7 @@ namespace Ctulhu.Controllers
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Profile", "Login");
                 }
 
                 ModelState.AddModelError("", "Пользователь с таким логином или email уже существует");
@@ -89,11 +89,11 @@ namespace Ctulhu.Controllers
                     
                     if (user.Role == "user")
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Profile", "Login");
                     }
                     else if (user.Role == "admin")
                     {
-                        return RedirectToAction("Admin", "Admin");
+                        return RedirectToAction("Profile", "Login");
                     }
                 }
 

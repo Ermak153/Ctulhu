@@ -14,6 +14,7 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public string Author { get; set; }
+        public bool IsApproved { get; set; }
 
         public override string ToString()
         {
