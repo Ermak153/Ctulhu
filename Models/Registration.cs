@@ -20,8 +20,6 @@ namespace Ctulhu.Models
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Пароль и подтверждение пароля не совпадают")]
         public string ConfirmPassword { get; set; }
-
-        // Role можно задавать по умолчанию как "user", если не хотите включать в форму регистрации
         public string Role { get; set; } = "user";
     }
 }

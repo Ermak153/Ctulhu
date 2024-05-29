@@ -36,9 +36,9 @@
 
     @if (User.IsInRole("admin"))
     {
-        <p>
-            <a href="@Url.Action("Admin", "Admin")">Перейти в панель администратора</a>
-        </p>
+        <form action="@Url.Action("Admin", "Admin")" method="get">
+            <button type="submit">Перейти в панель администратора</button>
+        </form>
     }
 </div>
 

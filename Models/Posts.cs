@@ -1,4 +1,6 @@
-﻿namespace Ctulhu.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Ctulhu.Models
 {
     public class Posts
     {
@@ -8,10 +10,13 @@
             Title = title;
             Description = description;
             Author = author;
+            IsApproved = false;
         }
 
         public int ID { get; set; }
+        [Required(ErrorMessage = "Заголовок обязателен")]
         public string Title { get; set; }
+        [Required(ErrorMessage = "Описание обязательно")]
         public string Description { get; set; }
         public string Author { get; set; }
         public bool IsApproved { get; set; }

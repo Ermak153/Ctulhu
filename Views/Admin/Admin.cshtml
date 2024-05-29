@@ -1,12 +1,8 @@
-﻿@model IEnumerable<Ctulhu.Models.Posts>
+﻿@* @model IEnumerable<Ctulhu.Models.Posts>
 
-<h1>Панель администратора</h1>
+<h1 style="margin: 0 auto;">Панель администратора</h1>
 
-<li class="nav-item">
-    <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="Users">Управление пользователями</a>
-</li>
-
-<table class="table">
+<table>
     <thead>
         <tr>
             <th>Заголовок</th>
@@ -23,16 +19,48 @@
                 <td>@post.Description</td>
                 <td>@post.Author</td>
                 <td>
-                    <form asp-action="Approve" method="post" style="display:inline">
+                    <form asp-action="Approve" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="@post.ID" />
-                        <button type="submit" class="btn btn-success">Одобрить</button>
+                        <button type="submit">Одобрить</button>
                     </form>
-                    <form asp-action="Reject" method="post" style="display:inline">
+                    <form asp-action="Reject" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="@post.ID" />
-                        <button type="submit" class="btn btn-danger">Отклонить</button>
+                        <button type="submit">Отклонить</button>
                     </form>
+                    <a asp-action="EditPost" asp-route-id="@post.ID">Редактировать</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+ *@
+
+@model IEnumerable<Ctulhu.Models.Posts>
+
+<div class="admin-panel">
+    <h1>Панель администратора</h1>
+    <form action="@Url.Action("Users", "Admin")" method="get">
+        <button type="submit">Перейти в панель управления пользователями</button>
+    </form>
+    <div class="post1-list">
+        @foreach (var post in Model)
+        {
+            <div class="post1">
+                <h2>@post.Title</h2>
+                <p>@post.Description</p>
+                <p>Автор: @post.Author</p>
+                <div class="actions">
+                    <form asp-action="Approve" method="post">
+                        <input type="hidden" name="id" value="@post.ID" />
+                        <button type="submit">Одобрить</button>
+                    </form>
+                    <form asp-action="Reject" method="post">
+                        <input type="hidden" name="id" value="@post.ID" />
+                        <button type="submit">Отклонить</button>
+                    </form>
+                    <a asp-action="EditPost" asp-route-id="@post.ID">Редактировать</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

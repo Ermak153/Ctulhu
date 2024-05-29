@@ -38,7 +38,7 @@ namespace Ctulhu.Controllers
                         Login = model.Login,
                         Email = model.Email,
                         Password = model.Password,
-                        Role = "user" // default role for new users
+                        Role = "user"
                     };
 
                     _context._users.Add(user);
@@ -103,7 +103,6 @@ namespace Ctulhu.Controllers
             return View(model);
         }
 
-        // Profile Actions
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> Profile()

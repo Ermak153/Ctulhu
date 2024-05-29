@@ -66,6 +66,7 @@ namespace Ctulhu.Controllers
         [HttpPost]
         public async Task<IActionResult> EditUser(int id, Users model)
         {
+            ModelState.Remove("Password");
             if (ModelState.IsValid)
             {
                 var user = await _context._users.FindAsync(id);
@@ -74,8 +75,7 @@ namespace Ctulhu.Controllers
                     return NotFound();
                 }
 
-                // Only update password if it was provided
-                if (!string.IsNullOrEmpty(model.Password))
+                if (!string.IsNullOrWhiteSpace(model.Password))
                 {
                     user.Password = model.Password;
                 }
@@ -89,6 +89,37 @@ namespace Ctulhu.Controllers
                 return RedirectToAction("Users");
             }
 
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult EditPost(int id)
+        {
+            var post = _context._posts.FirstOrDefault(p => p.ID == id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return View(post);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditPost(Posts model)
+        {
+            if (ModelState.IsValid)
+            {
+                var post = _context._posts.FirstOrDefault(p => p.ID == model.ID);
+                if (post != null)
+                {
+                    post.Title = model.Title;
+                    post.Description = model.Description;
+                    post.Author = model.Author;
+
+                    _context._posts.Update(post);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Admin");
+                }
+            }
             return View(model);
         }
     }

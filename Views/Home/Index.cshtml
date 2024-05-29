@@ -25,8 +25,9 @@
             <h1>@user.Email</h1>
             <h1>@user.Password</h1>
             <h1>@user.Role</h1>
-    </section>
+        </section>
     }
+
     <h2>Посты</h2>
     @foreach (var post in Model.Posts)
     {
@@ -34,8 +35,30 @@
             <h2>@post.Title</h2>
             <p>@post.Description</p>
             <small>Автор: @post.Author</small>
+
+            @if (User.IsInRole("admin"))
+            {
+                <form asp-action="EditPost" method="post">
+                    <input type="hidden" name="id" value="@post.ID" />
+                    <div>
+                        <label for="title">Заголовок</label>
+                        <input type="text" id="title" name="title" value="@post.Title" />
+                    </div>
+                    <div>
+                        <label for="description">Описание</label>
+                        <textarea id="description" name="description">@post.Description</textarea>
+                    </div>
+                    <button type="submit">Сохранить изменения</button>
+                </form>
+
+                <form asp-action="DeletePost" method="post">
+                    <input type="hidden" name="id" value="@post.ID" />
+                    <button type="submit">Удалить пост</button>
+                </form>
+            }
         </section>
     }
+
     @if (User.IsInRole("admin") || User.IsInRole("user"))
     {
         <h2>Создать новый пост</h2>

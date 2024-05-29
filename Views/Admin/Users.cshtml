@@ -1,29 +1,19 @@
 ﻿@model List<Ctulhu.Models.Users>
 
-<h1>Управление пользователями</h1>
+<div class="container">
+    <h1 class="admin-panel">Панель администратора</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Логин</th>
-            <th>Email</th>
-            <th>Роль</th>
-            <th>Действия</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var user in Model)
-        {
-            <tr>
-                <td>@user.ID</td>
-                <td>@user.Login</td>
-                <td>@user.Email</td>
-                <td>@user.Role</td>
-                <td>
-                    <a asp-action="EditUser" asp-route-id="@user.ID">Редактировать</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    @foreach (var user in Model)
+    {
+        <div class="user-card">
+            <div class="user-info">@user.ID</div>
+            <div class="user-info">@user.Login</div>
+            <div class="user-info">@user.Email</div>
+            <div class="user-info">@user.Role</div>
+            <div class="user-actions">
+                <a asp-action="EditUser" asp-route-id="@user.ID" class="btn orange"></a>
+                <button class="btn red"></button>
+            </div>
+        </div>
+    }
+</div>

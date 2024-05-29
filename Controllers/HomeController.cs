@@ -42,12 +42,40 @@ namespace Ctulhu.Controllers
                 Title = Title,
                 Description = Description,
                 Author = user.Login,
-                IsApproved = false // Новые посты по умолчанию не одобрены
+                IsApproved = false
             };
 
             _context._posts.Add(post);
             await _context.SaveChangesAsync();
 
+            return RedirectToAction("Index");
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpPost]
+        public async Task<IActionResult> EditPost(int id, string title, string description)
+        {
+            var post = _context._posts.FirstOrDefault(p => p.ID == id);
+            if (post != null)
+            {
+                post.Title = title;
+                post.Description = description;
+                _context._posts.Update(post);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpPost]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            var post = _context._posts.FirstOrDefault(p => p.ID == id);
+            if (post != null)
+            {
+                _context._posts.Remove(post);
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction("Index");
         }
     }

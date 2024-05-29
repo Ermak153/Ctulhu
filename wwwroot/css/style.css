@@ -152,5 +152,86 @@ header {
     left: 40%;
 }
 
+.admin-panel {
+    margin: 0 auto;
+    max-width: 800px; /* Примерное ограничение ширины панели */
+    padding: 20px;
+}
+
+.post1-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.post1 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+    .actions form,
+    .actions a {
+        margin-right: 10px;
+    }
+
+.container {
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 20px;
+    padding-right: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr auto;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.user-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+    .btn.orange {
+        background-color: orange;
+    }
+
+    .btn.red {
+        background-color: red;
+    }
+
 /*# sourceMappingURL=style.css.map */
 

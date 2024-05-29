@@ -38,7 +38,7 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
 
-    var users = context._users.ToList(); // Получение всех пользователей
+    var users = context._users.ToList();
     foreach (var user in users)
     {
         Console.WriteLine($"Login: {user.Login}, Password: {user.Password}, Role: {user.Role}");
