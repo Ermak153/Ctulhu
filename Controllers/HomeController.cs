@@ -27,6 +27,15 @@ namespace Ctulhu.Controllers
             var model = new UserPosts { Users = users, Posts = posts };
             return View(model);
         }
+        public async Task<IActionResult> About()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Contact()
+        {
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> CreatePost(string Title, string Description)
@@ -51,32 +60,40 @@ namespace Ctulhu.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPost]
-        public async Task<IActionResult> EditPost(int id, string title, string description)
+        [Authorize]
+        public async Task<IActionResult> EditPost([FromBody] PostEdit model)
         {
-            var post = _context._posts.FirstOrDefault(p => p.ID == id);
-            if (post != null)
+            var post = _context._posts.FirstOrDefault(p => p.ID == model.id);
+            var user = _context._users.FirstOrDefault(u => u.Login == User.Identity.Name);
+
+            if (post != null && (User.IsInRole("admin") || post.Author == user.Login))
             {
-                post.Title = title;
-                post.Description = description;
+                post.Title = model.title;
+                post.Description = model.description;
                 _context._posts.Update(post);
                 await _context.SaveChangesAsync();
+                return Ok();
             }
-            return RedirectToAction("Index");
+
+            return Unauthorized();
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> DeletePost(int id)
         {
             var post = _context._posts.FirstOrDefault(p => p.ID == id);
-            if (post != null)
+            var user = _context._users.FirstOrDefault(u => u.Login == User.Identity.Name);
+
+            if (post != null && (User.IsInRole("admin") || post.Author == user.Login))
             {
                 _context._posts.Remove(post);
                 await _context.SaveChangesAsync();
+                return Ok();
             }
-            return RedirectToAction("Index");
+
+            return Unauthorized();
         }
     }
 }

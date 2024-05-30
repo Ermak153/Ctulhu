@@ -2,76 +2,57 @@
 @model UserPosts
 
 <div style="display: inline-block;">
-    <section class="post">
-        <h1>Hello world</h1>
-        <img src="img/b3.jpg" width="300px">
-    </section>
+    <input type="text" placeholder="Поиск постов..." id="search">
+    <button id="filterButton">Фильтры</button>
+    <button id="createPostButton">Создать пост</button>
 
-    <section class="post">
-        <h2>ererge</h2>
-        <h2>ererge</h2>
-        <h2>ererge</h2>
-        <h2>ererge</h2>
-        <h2>ererge</h2>
-        <h2>ererge</h2>
-        <h2>ererge</h2>
-    </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Создать новый пост</h2>
+            <form id="createPostForm" asp-action="CreatePost">
+                <label for="title">Заголовок:</label>
+                <input type="text" id="title" name="title">
 
-    @foreach (var user in Model.Users)
-    {
-        <section class="post">
-            <h1>@user.ID</h1>
-            <h1>@user.Login</h1>
-            <h1>@user.Email</h1>
-            <h1>@user.Password</h1>
-            <h1>@user.Role</h1>
-        </section>
-    }
+                <label for="tags">Жанры/Теги:</label>
+                <input type="text" id="tags" name="tags">
 
-    <h2>Посты</h2>
-    @foreach (var post in Model.Posts)
-    {
-        <section class="post">
-            <h2>@post.Title</h2>
-            <p>@post.Description</p>
-            <small>Автор: @post.Author</small>
+                <label for="image">Изображение:</label>
+                <input type="file" id="image" name="image">
 
-            @if (User.IsInRole("admin"))
-            {
-                <form asp-action="EditPost" method="post">
-                    <input type="hidden" name="id" value="@post.ID" />
-                    <div>
-                        <label for="title">Заголовок</label>
-                        <input type="text" id="title" name="title" value="@post.Title" />
-                    </div>
-                    <div>
-                        <label for="description">Описание</label>
-                        <textarea id="description" name="description">@post.Description</textarea>
-                    </div>
-                    <button type="submit">Сохранить изменения</button>
-                </form>
+                <label for="description">Описание:</label>
+                <textarea id="description" name="description"></textarea>
 
-                <form asp-action="DeletePost" method="post">
-                    <input type="hidden" name="id" value="@post.ID" />
-                    <button type="submit">Удалить пост</button>
-                </form>
-            }
-        </section>
-    }
+                <button type="submit" id="createButton">Создать</button>
+                <button type="button" id="cancelButton">Отмена</button>
+            </form>
+        </div>
+    </div>
 
-    @if (User.IsInRole("admin") || User.IsInRole("user"))
-    {
-        <h2>Создать новый пост</h2>
-        <form asp-action="CreatePost" method="post">
-            <div>
-                <label for="Title">Заголовок</label>
-                <input type="text" id="Title" name="Title" />
-            </div>
-            <div>
-                <label for="Description">Описание</label>
-                <textarea id="Description" name="Description"></textarea>
-            </div>
-            <button type="submit">Создать пост</button>
-        </form>
-    }
+    <div class="posts-container">
+        @foreach (var post in Model.Posts)
+        {
+            <section class="post" data-post-id="@post.ID" style="position: relative;">
+                @if (User.IsInRole("admin") || User.Identity.Name == post.Author)
+                {
+                    <button class="menu-button">⋮</button>
+                    <ul class="menu-list">
+                        <li data-action="edit">Редактировать</li>
+                        <li data-action="delete">Удалить</li>
+                    </ul>
+                }
+                <div class="post-image">
+                    <img src="img/b3.jpg" alt="Изображение поста" />
+                </div>
+                <div class="post-content">
+                    <h2>@post.Title</h2>
+                    <p>@post.Description</p>
+                    <small>Автор: @post.Author</small>
+                </div>
+            </section>
+        }
+    </div>
 </div>
+
+<script src="~/script/editscript.js"></script>
+<script src="~/script/modalwindow.js"></script>

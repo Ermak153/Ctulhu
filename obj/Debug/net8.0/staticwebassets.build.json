@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rHDLNuQ2KLniW3wjrsDEjnIN3rH5wYifaMv4aYxW5zk=",
+  "Hash": "2dVH1EZfdCxd5PXshO+gzKKZwgNUdCJnKglRHqBbX/w=",
   "Source": "Ctulhu",
   "BasePath": "_content/Ctulhu",
   "Mode": "Default",
@@ -186,6 +186,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\profile_121261.png"
+    },
+    {
+      "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editscript.js",
+      "SourceId": "Ctulhu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\",
+      "BasePath": "_content/Ctulhu",
+      "RelativePath": "script/editscript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script\\editscript.js"
+    },
+    {
+      "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\modalwindow.js",
+      "SourceId": "Ctulhu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\",
+      "BasePath": "_content/Ctulhu",
+      "RelativePath": "script/modalwindow.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script\\modalwindow.js"
     }
   ]
 }

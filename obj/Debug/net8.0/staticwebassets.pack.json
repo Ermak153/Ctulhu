@@ -37,6 +37,14 @@
       "PackagePath": "staticwebassets\\img\\profile_121261.png"
     },
     {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editscript.js",
+      "PackagePath": "staticwebassets\\script\\editscript.js"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\modalwindow.js",
+      "PackagePath": "staticwebassets\\script\\modalwindow.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ctulhu.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
