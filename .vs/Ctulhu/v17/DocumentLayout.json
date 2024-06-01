@@ -3,24 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\views\\home\\post.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:views\\home\\post.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\models\\posts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:models\\posts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\editscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\editscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\modalwindow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\modalwindow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\models\\createpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:models\\createpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\models\\testmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:models\\testmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\searchauth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\searchauth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CtulhuDB/True/SqlTable/dbo._tag.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\tagselecter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\tagselecter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\searchunauth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\searchunauth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\basecontext\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:basecontext\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ermak\\AppData\\Local\\Temp\\y0g2txdj..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ermak\\AppData\\Local\\Temp\\y0g2txdj..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ermak\\AppData\\Local\\Temp\\y0g2txdj..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 88,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,67 +82,192 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "modalwindow.js",
-              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\modalwindow.js",
-              "RelativeDocumentMoniker": "wwwroot\\script\\modalwindow.js",
-              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\modalwindow.js",
-              "RelativeToolTip": "wwwroot\\script\\modalwindow.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "CreatePost.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\CreatePost.cs",
+              "RelativeDocumentMoniker": "Models\\CreatePost.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\CreatePost.cs",
+              "RelativeToolTip": "Models\\CreatePost.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:00:24.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "searchauth.js",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchauth.js",
+              "RelativeDocumentMoniker": "wwwroot\\script\\searchauth.js",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchauth.js",
+              "RelativeToolTip": "wwwroot\\script\\searchauth.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-30T15:23:37.393Z",
+              "WhenOpened": "2024-06-01T12:19:07.144Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "editscript.js",
-              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editscript.js",
-              "RelativeDocumentMoniker": "wwwroot\\script\\editscript.js",
-              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editscript.js",
-              "RelativeToolTip": "wwwroot\\script\\editscript.js",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwGcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-30T09:20:31.081Z",
+              "Title": "Posts.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\Posts.cs",
+              "RelativeDocumentMoniker": "Models\\Posts.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\Posts.cs",
+              "RelativeToolTip": "Models\\Posts.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA4wCIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T07:53:37.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "wwwroot\\css\\style.css",
-              "ViewState": "AQIAANIBAAAAAAAAAAAQwMYBAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-28T12:35:45.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAcwEIAAABNAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAuwEIAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T17:11:31.555Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "tagselecter.js",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\tagselecter.js",
+              "RelativeDocumentMoniker": "wwwroot\\script\\tagselecter.js",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\tagselecter.js",
+              "RelativeToolTip": "wwwroot\\script\\tagselecter.js",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwCkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-01T12:33:08.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\Tag.cs",
+              "RelativeDocumentMoniker": "Models\\Tag.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\Tag.cs",
+              "RelativeToolTip": "Models\\Tag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:25:41.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo._tag [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CtulhuDB/True/SqlTable/dbo._tag.sql",
+              "ToolTip": "dbo._tag [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-01T13:48:43.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAADUAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-29T06:49:33.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Post.cshtml",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Home\\Post.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Post.cshtml",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Home\\Post.cshtml",
+              "RelativeToolTip": "Views\\Home\\Post.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-01T14:17:21.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TestModel.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\TestModel.cs",
+              "RelativeDocumentMoniker": "Models\\TestModel.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Models\\TestModel.cs",
+              "RelativeToolTip": "Models\\TestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T16:09:59.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TagsController.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\TagsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TagsController.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\TagsController.cs",
+              "RelativeToolTip": "Controllers\\TagsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:40:18.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "searchunauth.js",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchunauth.js",
+              "RelativeDocumentMoniker": "wwwroot\\script\\searchunauth.js",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchunauth.js",
+              "RelativeToolTip": "wwwroot\\script\\searchunauth.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-01T12:22:05.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\BaseContext\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "BaseContext\\ApplicationContext.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\BaseContext\\ApplicationContext.cs",
+              "RelativeToolTip": "BaseContext\\ApplicationContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:24:45.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AQIAAIICAAAAAAAAAAAQwJoCAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-01T12:30:21.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\ermak\\AppData\\Local\\Temp\\y0g2txdj..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\y0g2txdj..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-01T12:46:08.905Z",
               "EditorCaption": ""
             }
           ]

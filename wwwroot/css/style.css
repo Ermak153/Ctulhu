@@ -131,13 +131,6 @@ header {
     display: inline-block;
 }
 
-.post {
-    display: inline-block;
-    margin: 30px;
-    width: 80%;
-    background-color: red;
-}
-
 .profile {
     margin-right: 30px;
     width: 50px;
@@ -367,6 +360,12 @@ header {
     white-space: nowrap;
 }
 
+.cancel-button1 {
+    display: none;
+    width: 100%;
+    box-sizing: border-box
+}
+
 .menu-list li:hover {
     background-color: #f0f0f0;
 }
@@ -482,13 +481,13 @@ header {
 }
 
 /* Стили для строки поиска и кнопок */
-#search {
+#searchauth {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    width: 70%;
+    width: 850px;
     height: auto;
     margin-left: 30px
 }
@@ -503,6 +502,17 @@ header {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+#searchunauth {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 1000px;
+    height: auto;
+    margin-left: 30px
 }
 
 #filterButton:hover {
@@ -548,5 +558,137 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+/* Стили для контейнера ссылки */
+.post-link-wrapper {
+    flex-grow: 1;
+}
+
+.post-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.post input[type='text'],
+.post textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: none;
+    font-family: inherit; /* Чтобы шрифт совпадал с остальной частью страницы */
+}
+.post textarea {
+    height: 125px;
+    resize: none;
+}
+
+.post .cancel-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+    .post .cancel-button:hover {
+        background-color: #e0e0e0;
+    }
+/*.selected-tags-container {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selected-tag {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+    .selected-tag .remove-tag {
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+.suggestions {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .suggestion:hover {
+        background-color: #f0f0f0;
+    }
+*/
+/* Стили для списка тегов *
+
+/* Стили для списка тегов */
+.tag-suggestion {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 3px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.tag-suggestion:hover {
+    background-color: #e0e0e0;
+}
+
+/* Стили для выбранных тегов */
+.selected-tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+.tag button.close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.tag button.close:hover {
+    color: #ccc;
+}
+
 
 /*# sourceMappingURL=style.css.map */

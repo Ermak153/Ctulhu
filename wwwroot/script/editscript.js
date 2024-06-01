@@ -27,6 +27,8 @@
                 editPost(postId, e.target);
             } else if (action === 'delete') {
                 deletePost(postId);
+            } else if (action === 'cancel') {
+                cancelEdit(postId);
             }
         });
     });
@@ -51,6 +53,9 @@
         editButton.textContent = 'Сохранить';
         editButton.setAttribute('data-action', 'save');
         editButton.setAttribute('onclick', `savePost(${postId}, this)`); // Добавлена ссылка на функцию savePost
+
+        const cancelButton = postElement.querySelector('.cancel-button1');
+        cancelButton.style.display = 'inline-block';
     }
 
     window.savePost = function (postId, saveButton) {
@@ -85,19 +90,42 @@
         if (!confirm("Вы уверены, что хотите удалить этот пост?")) {
             return;
         }
+
         fetch(`/Home/DeletePost`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ id: postId })
+            body: JSON.stringify(postId)
         }).then(response => {
             if (response.ok) {
                 const postElement = document.querySelector(`.post[data-post-id='${postId}']`);
                 postElement.remove();
             } else {
-                alert("Ошибка при удалении поста.");
+                response.json().then(data => {
+                    alert(`Ошибка при удалении поста: ${data.message}`);
+                });
             }
+        }).catch(error => {
+            alert(`Ошибка при удалении поста: ${error.message}`);
         });
+    }
+    function cancelEdit(postId) {
+        const postElement = document.querySelector(`.post[data-post-id='${postId}']`);
+        const titleElement = postElement.querySelector('h2');
+        const descriptionElement = postElement.querySelector('p');
+
+        titleElement.textContent = titleElement.querySelector('input').defaultValue;
+        descriptionElement.textContent = descriptionElement.querySelector('textarea').defaultValue;
+
+        const editButton = postElement.querySelector('[data-action="save"]');
+        editButton.textContent = 'Редактировать';
+        editButton.setAttribute('data-action', 'edit');
+        editButton.removeAttribute('onclick');
+        isEditing = false;
+
+        // Скрываем кнопку "Отмена"
+        const cancelButton = postElement.querySelector('.cancel-button1');
+        cancelButton.style.display = 'none';
     }
 });

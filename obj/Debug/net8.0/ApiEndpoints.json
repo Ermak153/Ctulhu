@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "Ctulhu.Controllers.TagsController",
+    "Method": "SearchTags",
+    "RelativePath": "Tags",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

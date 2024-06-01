@@ -1,0 +1,17 @@
+﻿@model Ctulhu.Models.Posts
+
+<h2>@Model.Title</h2>
+<p>@Model.Description</p>
+<p><strong>Дата создания:</strong> @Model.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</p>
+@if (Model.Tags != null && Model.Tags.Any())
+{
+    <p>
+        <strong>Теги:</strong>
+        @foreach (var tag in Model.Tags)
+        {
+            <span>@tag.Name</span>
+        }
+    </p>
+}
+<p><strong>Дата обновления:</strong> @Model.UpdatedAt.ToString("yyyy-MM-dd HH:mm:ss")</p>
+<small>Автор: @Model.Author</small>

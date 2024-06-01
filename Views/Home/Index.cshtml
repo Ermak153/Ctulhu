@@ -1,21 +1,39 @@
 ﻿@using Ctulhu.Models
-@model UserPosts
+@model CreatePost
 
 <div style="display: inline-block;">
-    <input type="text" placeholder="Поиск постов..." id="search">
-    <button id="filterButton">Фильтры</button>
-    <button id="createPostButton">Создать пост</button>
+    @if (User.IsInRole("admin") || User.IsInRole("user"))
+    {
+        <input type="text" placeholder="Поиск постов..." id="searchauth">
+        <button id="filterButton">Фильтры</button>
+        <button id="createPostButton">Создать пост</button>
+    } else
+    {
+        <input type="text" placeholder="Поиск постов..." id="searchunauth">
+        <button id="filterButton">Фильтры</button>
+    }
 
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Создать новый пост</h2>
-            <form id="createPostForm" asp-action="CreatePost">
+            <form id="createPostForm" asp-action="CreatePost" enctype="multipart/form-data">
                 <label for="title">Заголовок:</label>
                 <input type="text" id="title" name="title">
 
-                <label for="tags">Жанры/Теги:</label>
-                <input type="text" id="tags" name="tags">
+                <div>
+                    <label for="tags">Жанры/Теги:</label>
+                    <div id="tags">
+                        @foreach (var tag in Model.AvailableTags)
+                        {
+                            <div>
+                                <input type="checkbox" name="SelectedTagIds" value="@tag.ID" id="tag_@tag.ID">
+                                <label for="tag_@tag.ID">@tag.Name</label>
+                            </div>
+                        }
+                    </div>
+                    <span asp-validation-for="SelectedTagIds" class="text-danger"></span>
+                </div>
 
                 <label for="image">Изображение:</label>
                 <input type="file" id="image" name="image">
@@ -32,17 +50,21 @@
     <div class="posts-container">
         @foreach (var post in Model.Posts)
         {
-            <section class="post" data-post-id="@post.ID" style="position: relative;">
+            <section class="post" data-post-id="@post.ID">
                 @if (User.IsInRole("admin") || User.Identity.Name == post.Author)
                 {
                     <button class="menu-button">⋮</button>
                     <ul class="menu-list">
                         <li data-action="edit">Редактировать</li>
                         <li data-action="delete">Удалить</li>
+                        <li class="cancel-button1" data-action="cancel">Отмена</li>
                     </ul>
                 }
+                    
                 <div class="post-image">
-                    <img src="img/b3.jpg" alt="Изображение поста" />
+                    <a asp-action="Post" asp-route-id="@post.ID" style="text-decoration: none; color: black;">
+                        <img src="@post.ImageUrl" alt="Изображение поста" />
+                    </a>
                 </div>
                 <div class="post-content">
                     <h2>@post.Title</h2>
@@ -56,3 +78,6 @@
 
 <script src="~/script/editscript.js"></script>
 <script src="~/script/modalwindow.js"></script>
+<script src="~/script/searchauth.js"></script>
+<script src="~/script/searchunauth.js"></script>
+@* <script src="~/script/tagselecter.js"></script> *@
