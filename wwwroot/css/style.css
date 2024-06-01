@@ -239,6 +239,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left: 10px
 }
 
 .post {
@@ -452,6 +453,7 @@ header {
     font-size: 16px;
     max-width: 97%;
     min-width: 97%;
+    margin-bottom: 10px;
 }
 
 .modal-content button {
@@ -649,46 +651,91 @@ header {
 /* Стили для списка тегов *
 
 /* Стили для списка тегов */
-.tag-suggestion {
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 3px;
-    background-color: #f0f0f0;
-    border-radius: 3px;
+.tag-selector {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-radio {
+    display: none;
+}
+
+.tag-label {
     display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 2px; /* Добавим отступы между кнопками */
+    margin-bottom: -5px;
 }
 
-.tag-suggestion:hover {
+.tag-radio:checked + .tag-label {
+    background-color: #dcdcdc;
+    border-color: #a0a0a0;
+}
+
+.tag-label:hover {
     background-color: #e0e0e0;
+    border-color: #b0b0b0;
 }
 
-/* Стили для выбранных тегов */
-.selected-tags {
+.close, .close-filter {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus, .close-filter:hover, .close-filter:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tag-checkbox {
+    display: none;
+}
+
+.tag-label {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tag-checkbox:checked + .tag-label {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+#dateFilter {
+    width: 100%;
+    padding: 8px;
     margin-top: 10px;
 }
 
-.tag {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px;
-    margin: 3px;
-    border-radius: 3px;
-}
-
-.tag button.close {
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 12px;
+#filterForm button {
+    margin-top: 10px;
+    padding: 10px;
     cursor: pointer;
-    margin-left: 5px;
-    vertical-align: middle;
+    border: none;
+    color: white;
+    border-radius: 5px;
 }
 
-.tag button.close:hover {
-    color: #ccc;
+#cancelFilterButton {
+    background-color: #dc3545;
 }
+
+    #cancelFilterButton:hover {
+        background-color: #c82333;
+    }
 
 
 /*# sourceMappingURL=style.css.map */

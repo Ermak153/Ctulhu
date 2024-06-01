@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "u7cxCE3p/zBZqcjZsrqqIERwR9xxOVsLWQgaRqIfT/Q=",
+  "Hash": "Q9ymOuQxFO0izv+mwKSZnfzycPe4jUSs5pVzk6zEjP8=",
   "Source": "Ctulhu",
   "BasePath": "_content/Ctulhu",
   "Mode": "Default",
@@ -207,6 +207,25 @@
       "OriginalItemSpec": "wwwroot\\script\\editscript.js"
     },
     {
+      "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\filter.js",
+      "SourceId": "Ctulhu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\",
+      "BasePath": "_content/Ctulhu",
+      "RelativePath": "script/filter.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script\\filter.js"
+    },
+    {
       "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\modalwindow.js",
       "SourceId": "Ctulhu",
       "SourceType": "Discovered",
@@ -262,25 +281,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script\\searchunauth.js"
-    },
-    {
-      "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\tagselecter.js",
-      "SourceId": "Ctulhu",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\",
-      "BasePath": "_content/Ctulhu",
-      "RelativePath": "script/tagselecter.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\script\\tagselecter.js"
     },
     {
       "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\1555211553_0 240 2785 1807_1920x0_80_0_0_47e0b65485518af38a1aad72b81f8ff2.jpg",

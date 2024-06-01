@@ -7,8 +7,10 @@ namespace Ctulhu.Models
 {
     public class Posts
     {
-        public Posts() { }
-        public Posts(string title, string description, string author, string imageUrl, List<Tag> tags)
+        public Posts()
+        {
+        }
+        public Posts(string title, string description, string author, string imageUrl, string tag)
         {
             Title = title;
             Description = description;
@@ -17,7 +19,7 @@ namespace Ctulhu.Models
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
             ImageUrl = imageUrl;
-            Tags = tags ?? new List<Tag>();
+            Tag = tag;
         }
 
         public int ID { get; set; }
@@ -38,11 +40,12 @@ namespace Ctulhu.Models
 
         public string ImageUrl { get; set; }
 
-        public virtual List<Tag> Tags { get; set; }
+        [Required(ErrorMessage = "Теги обязательны")]
+        public string Tag { get; set; }
 
         public override string ToString()
         {
-            return $"Id:{ID} Title:{Title} Description: {Description} Author: {Author} CreatedAt: {CreatedAt} UpdatedAt: {UpdatedAt} ImageUrl: {ImageUrl}";
+            return $"Id:{ID} Title:{Title} Description: {Description} Author: {Author} CreatedAt: {CreatedAt} UpdatedAt: {UpdatedAt} ImageUrl: {ImageUrl} Tag: {Tag}";
         }
     }
 }

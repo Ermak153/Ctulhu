@@ -1,9 +1,12 @@
-﻿using Ctulhu.BaseContext;
+﻿using Azure;
+using Ctulhu.BaseContext;
 using Ctulhu.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Data;
 
 namespace Ctulhu.Controllers
 {
@@ -21,11 +24,24 @@ namespace Ctulhu.Controllers
             //Tag tag1 = new Tag { Name = "Рецепты" };
             //Tag tag2 = new Tag { Name = "Настойки" };
             //Tag tag3 = new Tag { Name = "Зелья" };
-            //Tag tag4 = new Tag { Name = "Травы" };
-            //_context._tags.Add(tag1);
-            //_context._tags.Add(tag2);
-            //_context._tags.Add(tag3);
-            //_context._tags.Add(tag4);
+            //Tag tag4 = new Tag { Name = "Лекарства" };
+            //Tag tag5 = new Tag { Name = "Полезные статьи" };
+            //Tag tag6 = new Tag { Name = "Блог" };
+            //Tag tag7 = new Tag { Name = "Травы" };
+            //Tag tag8 = new Tag { Name = "Цветы" };
+            //Tag tag9 = new Tag { Name = "Фрукты" };
+            //Tag tag10 = new Tag { Name = "Ягоды" };
+            //Tag tag11 = new Tag { Name = "Овощи" };
+            //_context._tag.Add(tag1);
+            //_context._tag.Add(tag2);
+            //_context._tag.Add(tag3);
+            //_context._tag.Add(tag4);
+            //_context._tag.Add(tag5);
+            //_context._tag.Add(tag6);
+            //_context._tag.Add(tag8);
+            //_context._tag.Add(tag9);
+            //_context._tag.Add(tag10);
+            //_context._tag.Add(tag11);
             //_context._posts.Add(post1);
             //_context._users.Add(user1);
             //_context._users.Add(user2);
@@ -35,12 +51,8 @@ namespace Ctulhu.Controllers
         {
             var users = await _context._users.ToListAsync();
             var posts = await _context._posts.Where(p => p.IsApproved).ToListAsync();
-            var tags = await _context._tag.ToListAsync();
-            var model = new CreatePost
-            {
-                Posts = posts,
-                AvailableTags = tags
-            };
+            var tags = await _context._tag.ToListAsync(); // Получаем список тегов
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags};
             return View(model);
         }
         public async Task<IActionResult> About()
@@ -53,18 +65,9 @@ namespace Ctulhu.Controllers
             return View();
         }
 
-        [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> CreatePost()
-        {
-            var tags = await _context._tag.ToListAsync();
-            ViewBag.Tags = tags;
-            return View();
-        }
-
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> CreatePost(CreatePost model)
+        public async Task<IActionResult> CreatePost(string title, string description, IFormFile image, string tag)
         {
             var user = _context._users.FirstOrDefault(u => u.Login == User.Identity.Name);
             if (user == null)
@@ -73,27 +76,27 @@ namespace Ctulhu.Controllers
             }
 
             string imagePath = null;
-            if (model.Image != null)
+
+            if (image != null)
             {
-                imagePath = "/uploads/" + model.Image.FileName;
+                imagePath = "/uploads/" + image.FileName;
+
                 using (var fileStream = new FileStream(_appEnvironment.WebRootPath + imagePath, FileMode.Create))
                 {
-                    await model.Image.CopyToAsync(fileStream);
+                    await image.CopyToAsync(fileStream);
                 }
             }
 
-            var tags = await _context._tag.Where(tag => model.SelectedTagIds.Contains(tag.ID)).ToListAsync();
-
             var post = new Posts
             {
-                Title = model.Title,
-                Description = model.Description,
+                Title = title,
+                Description = description,
                 Author = user.Login,
                 ImageUrl = imagePath,
-                Tags = tags,
+                Tag = tag,
+                IsApproved = false,
                 CreatedAt = DateTime.Now,
-                UpdatedAt = DateTime.Now,
-                IsApproved = false
+                UpdatedAt = DateTime.Now
             };
 
             _context._posts.Add(post);

@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\script\\editscript.js"
     },
     {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\filter.js",
+      "PackagePath": "staticwebassets\\script\\filter.js"
+    },
+    {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\modalwindow.js",
       "PackagePath": "staticwebassets\\script\\modalwindow.js"
     },
@@ -51,10 +55,6 @@
     {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchunauth.js",
       "PackagePath": "staticwebassets\\script\\searchunauth.js"
-    },
-    {
-      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\tagselecter.js",
-      "PackagePath": "staticwebassets\\script\\tagselecter.js"
     },
     {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\1555211553_0 240 2785 1807_1920x0_80_0_0_47e0b65485518af38a1aad72b81f8ff2.jpg",

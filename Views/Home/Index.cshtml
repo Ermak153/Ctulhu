@@ -1,5 +1,5 @@
 ﻿@using Ctulhu.Models
-@model CreatePost
+@model UserPosts
 
 <div style="display: inline-block;">
     @if (User.IsInRole("admin") || User.IsInRole("user"))
@@ -23,16 +23,13 @@
 
                 <div>
                     <label for="tags">Жанры/Теги:</label>
-                    <div id="tags">
-                        @foreach (var tag in Model.AvailableTags)
+                    <div class="tag-selector">
+                        @foreach (var tag in Model.Tags)
                         {
-                            <div>
-                                <input type="checkbox" name="SelectedTagIds" value="@tag.ID" id="tag_@tag.ID">
-                                <label for="tag_@tag.ID">@tag.Name</label>
-                            </div>
+                            <input type="radio" id="tag_@tag.ID" name="tag" value="@tag.Name" class="tag-radio">
+                            <label for="tag_@tag.ID" class="tag-label">@tag.Name</label>
                         }
                     </div>
-                    <span asp-validation-for="SelectedTagIds" class="text-danger"></span>
                 </div>
 
                 <label for="image">Изображение:</label>
@@ -43,6 +40,35 @@
 
                 <button type="submit" id="createButton">Создать</button>
                 <button type="button" id="cancelButton">Отмена</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-filter">&times;</span>
+            <h2>Фильтры</h2>
+            <form id="filterForm">
+                <label for="filterTags">Выберите теги:</label>
+                <div id="filterTags">
+                    @foreach (var tag in Model.Tags)
+                    {
+                        <input type="checkbox" id="filter_tag_@tag.ID" name="tags" value="@tag.Name" class="tag-checkbox">
+                        <label for="filter_tag_@tag.ID" class="tag-label">@tag.Name</label>
+                    }
+                </div>
+
+                <label for="dateFilter">Фильтр по дате:</label>
+                <select id="dateFilter" name="dateFilter">
+                    <option value="all">За всё время</option>
+                    <option value="today">Сегодня</option>
+                    <option value="week">За последнюю неделю</option>
+                    <option value="month">За месяц</option>
+                    <option value="year">За год</option>
+                </select>
+
+                <button type="submit">Применить</button>
+                <button type="button" id="cancelFilterButton">Отмена</button>
             </form>
         </div>
     </div>
@@ -69,7 +95,10 @@
                 <div class="post-content">
                     <h2>@post.Title</h2>
                     <p>@post.Description</p>
-                    <small>Автор: @post.Author</small>
+                    <div style="display: flex; justify-content: space-between">
+                        <small>Тег: @post.Tag</small>
+                        <small>Автор: @post.Author</small>
+                    </div>
                 </div>
             </section>
         }
@@ -80,4 +109,4 @@
 <script src="~/script/modalwindow.js"></script>
 <script src="~/script/searchauth.js"></script>
 <script src="~/script/searchunauth.js"></script>
-@* <script src="~/script/tagselecter.js"></script> *@
+<script src="~/script/filter.js"></script>
