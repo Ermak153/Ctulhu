@@ -8,6 +8,7 @@ namespace Ctulhu.BaseContext
         public DbSet<Users> _users { get; set; }
         public DbSet<Posts> _posts { get; set; }
         public DbSet<Tag> _tag { get; set; }
+        public DbSet<Comment> _comments { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
             //Database.EnsureDeleted();

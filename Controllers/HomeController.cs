@@ -1,10 +1,12 @@
 ﻿using Azure;
 using Ctulhu.BaseContext;
 using Ctulhu.Models;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Data;
 
@@ -19,8 +21,6 @@ namespace Ctulhu.Controllers
             _context = context;
             _appEnvironment = appEnvironment;
             //Users user1 = new Users { Login = "Neko", Email = "vorkunovae@mer.ci.nsu.ru", Password = "qwerty", Role = "admin" };
-            //Users user2 = new Users { Login = "Tamik17", Email = "syratts@mer.ci.nsu.ru", Password = "12345", Role = "user" };
-            //Posts post1 = new Posts { Title = "Example Title", Description = "Hello world", Author = "Neko" };
             //Tag tag1 = new Tag { Name = "Рецепты" };
             //Tag tag2 = new Tag { Name = "Настойки" };
             //Tag tag3 = new Tag { Name = "Зелья" };
@@ -32,6 +32,7 @@ namespace Ctulhu.Controllers
             //Tag tag9 = new Tag { Name = "Фрукты" };
             //Tag tag10 = new Tag { Name = "Ягоды" };
             //Tag tag11 = new Tag { Name = "Овощи" };
+            //Tag tag12 = new Tag { Name = "Травы" };
             //_context._tag.Add(tag1);
             //_context._tag.Add(tag2);
             //_context._tag.Add(tag3);
@@ -42,16 +43,15 @@ namespace Ctulhu.Controllers
             //_context._tag.Add(tag9);
             //_context._tag.Add(tag10);
             //_context._tag.Add(tag11);
-            //_context._posts.Add(post1);
+            //_context._tag.Add(tag12);
             //_context._users.Add(user1);
-            //_context._users.Add(user2);
             //_context.SaveChanges();
         }
         public async Task<IActionResult> Index()
         {
             var users = await _context._users.ToListAsync();
             var posts = await _context._posts.Where(p => p.IsApproved).ToListAsync();
-            var tags = await _context._tag.ToListAsync(); // Получаем список тегов
+            var tags = await _context._tag.ToListAsync();
             var model = new UserPosts { Users = users, Posts = posts, Tags = tags};
             return View(model);
         }
@@ -73,6 +73,11 @@ namespace Ctulhu.Controllers
             if (user == null)
             {
                 return Unauthorized();
+            }
+
+            if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(description) || image == null || string.IsNullOrEmpty(tag))
+            {
+                return RedirectToAction("Index");
             }
 
             string imagePath = null;
@@ -104,6 +109,7 @@ namespace Ctulhu.Controllers
 
             return RedirectToAction("Index");
         }
+
 
         [HttpPost]
         [Authorize]
@@ -149,12 +155,56 @@ namespace Ctulhu.Controllers
 
         public async Task<IActionResult> Post(int id)
         {
-            var post = await _context._posts.FirstOrDefaultAsync(p => p.ID == id && p.IsApproved);
+            var comments = await _context._comments.Where(c => c.PostID == id).ToListAsync();
+            var post = await _context._posts.FindAsync(id);
             if (post == null)
             {
                 return NotFound();
             }
-            return View(post);
+
+            var model = new PostComment
+            {
+                Posts = new List<Posts> { post },
+                Comment = comments
+            };
+
+            return View(model);
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetPosts()
+        {
+            var posts = await _context._posts.Select(p => new
+            {
+                p.ID,
+                p.CreatedAt
+            }).ToListAsync();
+
+            return Json(posts);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> AddComment(int postId, string text)
+        {
+            var user = _context._users.FirstOrDefault(u => u.Login == User.Identity.Name);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var comment = new Comment
+            {
+                PostID = postId,
+                Author = user.Login,
+                Text = text,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now
+            };
+
+            _context._comments.Add(comment);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Post", new { id = postId });
         }
     }
 }

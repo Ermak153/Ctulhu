@@ -8,6 +8,7 @@ using Microsoft.Win32;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Ctulhu.Filters;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Ctulhu.Controllers
 {
@@ -115,11 +116,17 @@ namespace Ctulhu.Controllers
                 return RedirectToAction("Login");
             }
 
+            var userPosts = await _context._posts.Where(p => p.Author == userLogin).ToListAsync();
+            var userComments = await _context._comments.Where(p => p.Author == userLogin).ToListAsync();
+
+            Console.WriteLine($"Found {userPosts.Count} posts for user {userLogin}");
             var model = new UserProfile
             {
                 ID = user.ID,
                 Login = user.Login,
-                Email = user.Email
+                Email = user.Email,
+                Posts = userPosts,
+                Comments = userComments
             };
 
             return View(model);

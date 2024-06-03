@@ -8,5 +8,7 @@
         public string OldPassword { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
+        public List<Posts> Posts { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

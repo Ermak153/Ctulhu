@@ -1,41 +1,4 @@
-﻿@* @model IEnumerable<Ctulhu.Models.Posts>
-
-<h1 style="margin: 0 auto;">Панель администратора</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>Заголовок</th>
-            <th>Описание</th>
-            <th>Автор</th>
-            <th>Действия</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var post in Model)
-        {
-            <tr>
-                <td>@post.Title</td>
-                <td>@post.Description</td>
-                <td>@post.Author</td>
-                <td>
-                    <form asp-action="Approve" method="post" style="display:inline;">
-                        <input type="hidden" name="id" value="@post.ID" />
-                        <button type="submit">Одобрить</button>
-                    </form>
-                    <form asp-action="Reject" method="post" style="display:inline;">
-                        <input type="hidden" name="id" value="@post.ID" />
-                        <button type="submit">Отклонить</button>
-                    </form>
-                    <a asp-action="EditPost" asp-route-id="@post.ID">Редактировать</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
- *@
-
-@model IEnumerable<Ctulhu.Models.Posts>
+﻿@model IEnumerable<Ctulhu.Models.Posts>
 
 <div class="admin-panel">
     <h1>Панель администратора</h1>

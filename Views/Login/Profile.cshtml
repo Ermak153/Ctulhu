@@ -1,49 +1,77 @@
 ﻿@model Ctulhu.Models.UserProfile
 
-<div class="profile">
+<div class="user-profile-container">
     <h1>Профиль пользователя</h1>
-    <form asp-action="Profile" method="post">
+    <div style="display: flex; justify-content: space-between;">
+        <form asp-action="Profile" method="post" class="user-profile-form">
+            <div class="profile-form-group">
+                <label asp-for="Login">Логин</label>
+                <input asp-for="Login" readonly class="profile-form-control" />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="profile-form-group">
+                <label asp-for="Email">E-mail</label>
+                <input asp-for="Email" class="profile-form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="profile-form-group">
+                <label asp-for="OldPassword">Старый пароль</label>
+                <input asp-for="OldPassword" type="password" class="profile-form-control" />
+                <span asp-validation-for="OldPassword" class="text-danger"></span>
+            </div>
+            <div class="profile-form-group">
+                <label asp-for="Password">Новый пароль</label>
+                <input asp-for="Password" type="password" class="profile-form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="profile-form-group">
+                <label asp-for="ConfirmPassword">Подтвердите новый пароль</label>
+                <input asp-for="ConfirmPassword" type="password" class="profile-form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="save-btn">Сохранить изменения</button>
+        </form>
+
         <div>
-            <label asp-for="Login"></label>
-            <input asp-for="Login" readonly />
-            <span asp-validation-for="Login" class="text-danger"></span>
+            <h3>Количество постов: @Model.Posts.Count</h3>
+            <h3>Количество комментариев: @Model.Comments.Count</h3>
         </div>
-        <div>
-            <label asp-for="Email"></label>
-            <input asp-for="Email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div>
-            <label asp-for="OldPassword">Старый пароль</label>
-            <input asp-for="OldPassword" type="password" />
-            <span asp-validation-for="OldPassword" class="text-danger"></span>
-        </div>
-        <div>
-            <label asp-for="Password">Новый пароль</label>
-            <input asp-for="Password" type="password" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-        <div>
-            <label asp-for="ConfirmPassword">Подтвердите новый пароль</label>
-            <input asp-for="ConfirmPassword" type="password" />
-            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-        </div>
-        <button type="submit">Сохранить изменения</button>
-    </form>
-    <form asp-action="Logout" method="post">
-        <button type="submit">Выйти</button>
+    </div>
+    <form asp-action="Logout" method="post" class="logout-form">
+        <button type="submit" class="logout-btn">Выйти</button>
     </form>
 
     @if (User.IsInRole("admin"))
     {
-        <form action="@Url.Action("Admin", "Admin")" method="get">
-            <button type="submit">Перейти в панель администратора</button>
+        <form action="@Url.Action("Admin", "Admin")" method="get" class="admin-panel-form">
+            <button type="submit" class="admin-btn">Перейти в панель администратора</button>
         </form>
     }
-</div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
+    <h2>Мои посты</h2>
+    <div class="user-posts-container">
+        @foreach (var post in Model.Posts)
+        {
+            <div class="user-post">
+                <a asp-action="Post" asp-controller="Home" asp-route-id="@post.ID" style="text-decoration: none; color: black;">
+                    <h3>@post.Title</h3>
+                </a>
+                <p>@post.Description</p>
+                <small>Создан: @post.CreatedAt</small>
+                <small>Тег: @post.Tag</small>
+                <small>Автор: @post.Author</small>
+                @if (User.IsInRole("admin") || User.Identity.Name == post.Author)
+                {   
+                    <div class="dropdown">
+                        <button class="edit-post-btn" data-id="@post.ID">Редактировать</button>
+                        <button class="delete-post-btn" data-id="@post.ID">Удалить</button>
+                    </div>
+                }
+            </div>
+        }
+        @if (!Model.Posts.Any())
+        {
+            <p>Посты не найдены</p>
+        }
+    </div>
+</div>

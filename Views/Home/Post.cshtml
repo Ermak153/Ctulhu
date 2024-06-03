@@ -1,8 +1,39 @@
-﻿@model Ctulhu.Models.Posts
+﻿@using Ctulhu.Models
+@model PostComment
 
-<h2>@Model.Title</h2>
-<p>@Model.Description</p>
-<p><strong>Дата создания:</strong> @Model.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</p>
-<p><strong>Дата обновления:</strong> @Model.UpdatedAt.ToString("yyyy-MM-dd HH:mm:ss")</p>
-<small>Автор: @Model.Author</small>
-<p>@Model.Tag</p>
+<div class="unique-post-container">
+    <div class="unique-post-content">
+        @if (!string.IsNullOrEmpty(Model.Posts.FirstOrDefault().ImageUrl))
+        {
+            <img src="@Model.Posts.FirstOrDefault().ImageUrl" alt="Post image" class="unique-post-image" />
+        }
+        <h1>@Model.Posts.FirstOrDefault().Title</h1>
+        <p>@Model.Posts.FirstOrDefault().Description</p>
+        <p><strong>Автор:</strong> @Model.Posts.FirstOrDefault().Author</p>
+        <p><strong>Опубликовано:</strong> @Model.Posts.FirstOrDefault().CreatedAt.ToString("dd MMM yyyy")</p>
+    </div>
+
+    <div class="unique-comments-section">
+        <h2>Комментарии</h2>
+        @foreach (var comment in Model.Comment)
+        {
+            <div class="unique-comment-item">
+                <p>@comment.Text</p>
+                <p><strong>@comment.Author</strong> @comment.CreatedAt.ToString("dd MMM yyyy HH:mm")</p>
+            </div>
+        }
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <form method="post" asp-action="AddComment" asp-controller="Home" class="unique-comment-form">
+                <input type="hidden" name="postId" value="@Model.Posts.FirstOrDefault().ID" />
+                <textarea name="text" placeholder="Добавить комментарий..." required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        }
+        else
+        {
+            <p>Пожалуйста, <a asp-controller="Login" asp-action="Login">войдите</a>, чтобы оставить комментарий.</p>
+        }
+    </div>
+</div>

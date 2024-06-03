@@ -61,8 +61,28 @@
       "PackagePath": "staticwebassets\\uploads\\1555211553_0 240 2785 1807_1920x0_80_0_0_47e0b65485518af38a1aad72b81f8ff2.jpg"
     },
     {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\172783-senku_isigami-doktor_kamen-tajdzyu_oki-anime-mir-3840x2160.jpg",
+      "PackagePath": "staticwebassets\\uploads\\172783-senku_isigami-doktor_kamen-tajdzyu_oki-anime-mir-3840x2160.jpg"
+    },
+    {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\b3.jpg",
       "PackagePath": "staticwebassets\\uploads\\b3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\backimg.jpg",
+      "PackagePath": "staticwebassets\\uploads\\backimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\images.jpg",
+      "PackagePath": "staticwebassets\\uploads\\images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\top-v-rastoropsha-polza-i-vred-960x540-1-560x420.jpg",
+      "PackagePath": "staticwebassets\\uploads\\top-v-rastoropsha-polza-i-vred-960x540-1-560x420.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\verbes-provence.jpg",
+      "PackagePath": "staticwebassets\\uploads\\verbes-provence.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ctulhu.Microsoft.AspNetCore.StaticWebAssets.props",

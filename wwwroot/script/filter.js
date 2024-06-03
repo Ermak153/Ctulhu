@@ -27,27 +27,45 @@
     filterForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        var selectedTags = Array.from(filterForm.elements['tags'])
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.value);
-
         var dateFilter = filterForm.elements['dateFilter'].value;
 
-        filterPosts(selectedTags, dateFilter);
+        fetchPosts(dateFilter);
         filterModal.style.display = 'none';
     });
 
-    function filterPosts(tags, dateFilter) {
+    function fetchPosts(dateFilter) {
+        fetch('/Home/GetPosts')
+            .then(response => response.json())
+            .then(posts => {
+                updatePostAttributes(posts);
+                filterPosts(dateFilter);
+            })
+            .catch(error => console.error('Error fetching posts:', error));
+    }
+
+    function updatePostAttributes(posts) {
+        posts.forEach(post => {
+            var postElement = document.getElementById(`${post.ID}`);
+            console.log('------------------')
+            console.log(post.ID)
+            console.log(post.CreatedAt)
+            console.log('------------------')
+            if (postElement) {
+                postElement.setAttribute('data-created-at', post.CreatedAt);
+            }
+        });
+    }
+
+    function filterPosts(dateFilter) {
+        var now = new Date();
         var posts = Array.from(postsContainer.getElementsByClassName('post'));
 
         posts.forEach(post => {
-            var postTag = post.querySelector('.post-content small:first-child').innerText.replace('Тег: ', '');
-            var postDate = new Date(post.querySelector('.post-content small:last-child').innerText.replace('Автор: ', ''));
+            var postDate = new Date(post.getAttribute('data-created-at'));
 
-            var isTagMatch = tags.length === 0 || tags.includes(postTag);
-            var isDateMatch = checkDateFilter(postDate, dateFilter);
+            var isDateMatch = checkDateFilter(postDate, dateFilter, now);
 
-            if (isTagMatch && isDateMatch) {
+            if (isDateMatch) {
                 post.style.display = 'block';
             } else {
                 post.style.display = 'none';
@@ -55,9 +73,7 @@
         });
     }
 
-    function checkDateFilter(postDate, dateFilter) {
-        var now = new Date();
-
+    function checkDateFilter(postDate, dateFilter, now) {
         switch (dateFilter) {
             case 'today':
                 return postDate.toDateString() === now.toDateString();

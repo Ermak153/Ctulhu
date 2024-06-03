@@ -246,14 +246,14 @@ header {
     display: flex;
     flex-direction: column;
     margin: 20px;
-    width: 350px; /* фиксированная ширина */
-    height: 500px; /* фиксированная высота */
+    width: 350px;
+    height: 500px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
-    position: relative; /* Добавлено для позиционирования */
+    position: relative;
 }
 
 .post:hover {
@@ -263,7 +263,7 @@ header {
 .post-image img {
     width: 100%;
     height: auto;
-    max-height: 200px; /* уменьшенный размер изображения */
+    max-height: 200px;
     display: block;
 }
 
@@ -371,9 +371,6 @@ header {
     background-color: #f0f0f0;
 }
 
-/* Стили для toolbar */
-
-
 .modal {
     display: none;
     position: fixed;
@@ -383,8 +380,8 @@ header {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* затемнение фона */
-    backdrop-filter: blur(5px); /* размытие фона */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -397,7 +394,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-    animation: fadeIn 0.3s; /* плавное появление */
+    animation: fadeIn 0.3s;
 }
 
 @keyframes fadeIn {
@@ -482,7 +479,6 @@ header {
     background-color: #c82333;
 }
 
-/* Стили для строки поиска и кнопок */
 #searchauth {
     padding: 10px;
     margin-right: 10px;
@@ -561,7 +557,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* Стили для контейнера ссылки */
 .post-link-wrapper {
     flex-grow: 1;
 }
@@ -586,7 +581,7 @@ header {
     font-size: 1rem;
     line-height: 1.5;
     resize: none;
-    font-family: inherit; /* Чтобы шрифт совпадал с остальной частью страницы */
+    font-family: inherit;
 }
 .post textarea {
     height: 125px;
@@ -607,50 +602,7 @@ header {
     .post .cancel-button:hover {
         background-color: #e0e0e0;
     }
-/*.selected-tags-container {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.selected-tag {
-    background-color: #007bff;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-
-    .selected-tag .remove-tag {
-        margin-left: 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-.suggestions {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-height: 150px;
-    overflow-y: auto;
-    display: none;
-}
-
-.suggestion {
-    padding: 10px;
-    cursor: pointer;
-}
-
-    .suggestion:hover {
-        background-color: #f0f0f0;
-    }
-*/
-/* Стили для списка тегов *
-
-/* Стили для списка тегов */
 .tag-selector {
     display: flex;
     flex-wrap: wrap;
@@ -668,13 +620,14 @@ header {
     cursor: pointer;
     background-color: #f0f0f0;
     transition: background-color 0.3s, border-color 0.3s;
-    margin: 2px; /* Добавим отступы между кнопками */
+    margin: 2px;
     margin-bottom: -5px;
 }
 
 .tag-radio:checked + .tag-label {
-    background-color: #dcdcdc;
-    border-color: #a0a0a0;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
 }
 
 .tag-label:hover {
@@ -733,9 +686,232 @@ header {
     background-color: #dc3545;
 }
 
-    #cancelFilterButton:hover {
-        background-color: #c82333;
-    }
+#cancelFilterButton:hover {
+    background-color: #c82333;
+}
 
+.unique-post-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
 
-/*# sourceMappingURL=style.css.map */
+.unique-post-content {
+    margin-bottom: 30px;
+}
+
+.unique-post-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.unique-post-content p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.unique-post-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.unique-comments-section {
+    margin-top: 30px;
+}
+
+.unique-comments-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.unique-comment-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.unique-comment-item p {
+    margin-bottom: 10px;
+}
+
+.unique-comment-form {
+    margin-top: 20px;
+}
+
+.unique-comment-form textarea {
+    width: 1092px;
+    resize: vertical;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.unique-comment-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.unique-comment-form button:hover {
+    background-color: #0056b3;
+}
+
+.user-profile-container {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 30px;
+}
+
+.user-profile-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-profile-form,
+.logout-form,
+.admin-panel-form {
+    margin-bottom: 20px;
+}
+
+.profile-form-group {
+    margin-bottom: 15px;
+}
+
+.profile-form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.profile-form-control {
+    width: 550px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 570px;
+    margin-bottom: 10px;
+}
+
+.save-btn:hover {
+    background-color: #429a46;
+    transition: 0.2s;
+}
+
+.logout-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 570px;
+    margin-bottom: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #d6382d;
+    transition: 0.2s;
+}
+
+.admin-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 570px;
+    margin-bottom: 10px;
+}
+
+.admin-btn:hover {
+    background-color: #00749a;
+    transition: 0.2s;
+}
+
+.user-posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.user-post {
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.user-post h3 {
+    margin-top: 0;
+}
+
+.user-post p {
+    margin-bottom: 10px;
+}
+
+.user-post small {
+    display: block;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.edit-post-btn,
+.delete-post-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-post-btn {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.delete-post-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.edit-post-btn:hover,
+.delete-post-btn:hover {
+    opacity: 0.8;
+}
+
+.btn-menu {
+    cursor: pointer;
+}

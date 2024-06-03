@@ -52,7 +52,7 @@
 
         editButton.textContent = 'Сохранить';
         editButton.setAttribute('data-action', 'save');
-        editButton.setAttribute('onclick', `savePost(${postId}, this)`); // Добавлена ссылка на функцию savePost
+        editButton.setAttribute('onclick', `savePost(${postId}, this)`);
 
         const cancelButton = postElement.querySelector('.cancel-button1');
         cancelButton.style.display = 'inline-block';
@@ -79,7 +79,7 @@
                 isEditing = false;
                 saveButton.textContent = 'Редактировать';
                 saveButton.setAttribute('data-action', 'edit');
-                saveButton.setAttribute('onclick', ''); // Удаляем атрибут onclick
+                saveButton.setAttribute('onclick', '');
             } else {
                 alert("Ошибка при сохранении изменений.");
             }
@@ -124,7 +124,6 @@
         editButton.removeAttribute('onclick');
         isEditing = false;
 
-        // Скрываем кнопку "Отмена"
         const cancelButton = postElement.querySelector('.cancel-button1');
         cancelButton.style.display = 'none';
     }
