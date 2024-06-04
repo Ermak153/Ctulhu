@@ -11,7 +11,9 @@
         <p>@Model.Posts.FirstOrDefault().Description</p>
         <p><strong>Автор:</strong> @Model.Posts.FirstOrDefault().Author</p>
         <p><strong>Опубликовано:</strong> @Model.Posts.FirstOrDefault().CreatedAt.ToString("dd MMM yyyy")</p>
+        <p><strong>Тег:</strong> @Model.Posts.FirstOrDefault().Tag</p>
     </div>
+
 
     <div class="unique-comments-section">
         <h2>Комментарии</h2>
@@ -20,6 +22,13 @@
             <div class="unique-comment-item">
                 <p>@comment.Text</p>
                 <p><strong>@comment.Author</strong> @comment.CreatedAt.ToString("dd MMM yyyy HH:mm")</p>
+                @if (User.IsInRole("admin") || User.Identity.Name == comment.Author)
+                {
+                    <form method="post" asp-action="DeleteComment" asp-controller="Home" asp-route-commentId="@comment.ID">
+                        <input type="hidden" name="postId" value="@Model.Posts.FirstOrDefault().ID" />
+                        <button type="submit" class="delete-comment-btn">☓</button>
+                    </form>
+                }
             </div>
         }
 
@@ -36,4 +45,6 @@
             <p>Пожалуйста, <a asp-controller="Login" asp-action="Login">войдите</a>, чтобы оставить комментарий.</p>
         }
     </div>
+
+
 </div>

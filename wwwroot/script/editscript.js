@@ -45,7 +45,7 @@
         const descriptionElement = postElement.querySelector('p');
 
         const originalTitle = titleElement.textContent;
-        const originalDescription = descriptionElement.textContent;
+        const originalDescription = postElement.getAttribute('data-full-description');
 
         titleElement.innerHTML = `<input type='text' value='${originalTitle}' />`;
         descriptionElement.innerHTML = `<textarea>${originalDescription}</textarea>`;
@@ -75,7 +75,10 @@
         }).then(response => {
             if (response.ok) {
                 postElement.querySelector('h2').textContent = updatedTitle;
-                postElement.querySelector('p').textContent = updatedDescription;
+                const updatedDescription = postElement.querySelector('p textarea').value;
+                postElement.querySelector('p').textContent = (updatedDescription.length > 150
+                    ? updatedDescription.substring(0, 150) + "..."
+                    : updatedDescription);
                 isEditing = false;
                 saveButton.textContent = 'Редактировать';
                 saveButton.setAttribute('data-action', 'edit');
@@ -116,7 +119,9 @@
         const descriptionElement = postElement.querySelector('p');
 
         titleElement.textContent = titleElement.querySelector('input').defaultValue;
-        descriptionElement.textContent = descriptionElement.querySelector('textarea').defaultValue;
+        descriptionElement.textContent = (postElement.getAttribute('data-full-description').length > 150
+            ? postElement.getAttribute('data-full-description').substring(0, 150) + "..."
+            : postElement.getAttribute('data-full-description'));
 
         const editButton = postElement.querySelector('[data-action="save"]');
         editButton.textContent = 'Редактировать';

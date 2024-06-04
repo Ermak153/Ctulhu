@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="@Url.Content("~/css/style.css")" rel="stylesheet" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
 
     <title>Ctulhu</title>
 </head>
@@ -16,15 +14,15 @@
             <ul>
                 <li><a href="@Url.Action("Index", "Home")">Домой</a></li>
                 <li>
-                    <a href="#">Рецепты</a>
+                    <a href="@Url.Action("Recipes", "Home")">Рецепты</a>
                     <ul>
-                        <li><a href="#">Настойки</a></li>
-                        <li><a href="#">Зелья</a></li>
-                        <li><a href="#">Лекарства</a></li>
+                        <li><a href="@Url.Action("Tinctures", "Home")">Настойки</a></li>
+                        <li><a href="@Url.Action("Potions", "Home")">Зелья</a></li>
+                        <li><a href="@Url.Action("Medicines", "Home")">Лекарства</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Полезные статьи</a></li>
-                <li><a href="#">Блог</a></li>
+                <li><a href="@Url.Action("Articles", "Home")">Полезные статьи</a></li>
+                <li><a href="@Url.Action("Blog", "Home")">Блог</a></li>
                 <li><a href="@Url.Action("Contact", "Home")">Контакты</a></li>
                 <li><a href="@Url.Action("About", "Home")">О нас</a></li>
             </ul>
@@ -38,15 +36,21 @@
 
 
     <footer>
+        <div style="margin: 15px;">
+            <a href="https://t.me/neko153" style="display: flex; text-decoration: none; color: white;">
+                <img src="~/img/telegram-logo.png" width="40px" height="40px"/>
+                <h2 style="margin-left: 15px">Telegram</h2>
+            </a>
+            <a href="https://github.com/Ermak153/" style="display: flex; text-decoration: none; color: white;">
+                <img src="~/img/github-logo.png" width="40px" height="40px" />
+                <h2 style="margin-left: 15px">Github</h2>
+            </a>
+        </div>
         <div>
             <h1 style="margin-right: 20px;">Разработано в рамках учебного проекта</h1>
             <h2>Андрей Воркунов 107в2</h2>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js"></script>
 
-    @RenderSection("Scripts", required: false)
 </body>
 </html>

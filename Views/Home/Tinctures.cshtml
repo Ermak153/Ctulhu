@@ -1,0 +1,105 @@
+﻿@using Ctulhu.Models
+@model UserPosts
+
+<div style="display: inline-block;">
+    @if (User.IsInRole("admin") || User.IsInRole("user"))
+    {
+        <input type="text" placeholder="Поиск постов..." id="searchauth">
+        <button id="filterButton">Фильтры</button>
+        <button id="createPostButton">Создать пост</button>
+    }
+    else
+    {
+        <input type="text" placeholder="Поиск постов..." id="searchunauth">
+        <button id="filterButton">Фильтры</button>
+    }
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Создать новый пост</h2>
+            <form id="createPostForm" asp-action="CreatePost" enctype="multipart/form-data">
+                <p style="color: red; display: none;" id="error">Все поля должны быть заполнены</p>
+                <label for="title">Заголовок:</label>
+                <input type="text" id="title" name="title">
+
+                <div>
+                    <label for="tags">Жанры/Теги:</label>
+                    <div class="tag-selector">
+                        @foreach (var tag in Model.Tags)
+                        {
+                            <input type="radio" id="tag_@tag.ID" name="tag" value="@tag.Name" class="tag-radio">
+                            <label for="tag_@tag.ID" class="tag-label">@tag.Name</label>
+                        }
+                    </div>
+                </div>
+
+                <label for="image">Изображение:</label>
+                <input type="file" id="image" name="image">
+
+                <label for="description">Описание:</label>
+                <textarea id="description" name="description"></textarea>
+
+                <button type="submit" id="createButton">Создать</button>
+                <button type="button" id="cancelButton">Отмена</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-filter">&times;</span>
+            <h2>Фильтры</h2>
+            <form id="filterForm">
+                <label for="dateFilter">Фильтр по дате:</label>
+                <select id="dateFilter" name="dateFilter">
+                    <option value="all">За всё время</option>
+                    <option value="today">Сегодня</option>
+                    <option value="week">За последнюю неделю</option>
+                    <option value="month">За месяц</option>
+                    <option value="year">За год</option>
+                </select>
+
+                <button type="submit">Применить</button>
+                <button type="button" id="cancelFilterButton">Отмена</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="posts-container">
+        @foreach (var post in Model.Posts)
+        {
+            <section id="@post.ID" class="post" data-post-id="@post.ID" data-full-description="@post.Description">
+                @if (User.IsInRole("admin") || User.Identity.Name == post.Author)
+                {
+                    <button class="menu-button">⋮</button>
+                    <ul class="menu-list">
+                        <li data-action="edit">Редактировать</li>
+                        <li data-action="delete">Удалить</li>
+                        <li class="cancel-button1" data-action="cancel">Отмена</li>
+                    </ul>
+                }
+
+                <div class="post-image">
+                    <a asp-action="Post" asp-route-id="@post.ID" style="text-decoration: none; color: black;">
+                        <img src="@post.ImageUrl" alt="Изображение поста" />
+                    </a>
+                </div>
+                <div class="post-content">
+                    <h2>@post.Title</h2>
+                    <p>@(post.Description.Length > 150 ? post.Description.Substring(0, 150) + "..." : post.Description)</p>
+                    <div style="display: flex; justify-content: space-between">
+                        <small>Тег: @post.Tag</small>
+                        <small>Автор: @post.Author</small>
+                    </div>
+                </div>
+            </section>
+        }
+    </div>
+</div>
+
+<script src="~/script/editscript.js"></script>
+<script src="~/script/modalwindow.js"></script>
+<script src="~/script/searchauth.js"></script>
+<script src="~/script/searchunauth.js"></script>
+<script src="~/script/filter.js"></script>

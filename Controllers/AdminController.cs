@@ -51,6 +51,16 @@ namespace Ctulhu.Controllers
             var users = _context._users.ToList();
             return View(users);
         }
+        [HttpGet]
+        public IActionResult GetUser(int userId)
+        {
+            var user = _context._users.Find(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Json(user);
+        }
 
         [HttpGet]
         public IActionResult EditUser(int id)
@@ -124,4 +134,3 @@ namespace Ctulhu.Controllers
         }
     }
 }
-

@@ -5,15 +5,18 @@
 
     @foreach (var user in Model)
     {
-        <div class="user-card">
+        <div class="user-card" data-user-id="@user.ID">
             <div class="user-info">@user.ID</div>
-            <div class="user-info">@user.Login</div>
-            <div class="user-info">@user.Email</div>
-            <div class="user-info">@user.Role</div>
+            <div class="user-info user-login">@user.Login</div>
+            <div class="user-info user-email">@user.Email</div>
+            <div class="user-info user-role">@user.Role</div>
             <div class="user-actions">
-                <a asp-action="EditUser" asp-route-id="@user.ID" class="btn orange"></a>
-                <button class="btn red"></button>
+                <button class="btn orange edit-user-btn"></button>
+                <button class="btn green save-user-btn" style="display:none;"></button>
             </div>
         </div>
     }
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/script/editusers.js"></script>

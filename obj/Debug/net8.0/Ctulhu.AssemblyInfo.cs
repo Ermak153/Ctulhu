@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ctulhu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+063551710eb0424299a062fb787738a574ed73f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5c0e146efd7607cb5755f70c3d2068ed3539b42")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ctulhu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ctulhu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

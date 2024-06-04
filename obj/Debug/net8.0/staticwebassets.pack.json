@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\img\\profile_121261.png"
     },
     {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\telegram-logo.png",
+      "PackagePath": "staticwebassets\\img\\telegram-logo.png"
+    },
+    {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editscript.js",
       "PackagePath": "staticwebassets\\script\\editscript.js"
     },
@@ -77,12 +81,32 @@
       "PackagePath": "staticwebassets\\uploads\\images.jpg"
     },
     {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\krapiva_-polza-i-vred-dlya-organizma-960x540.jpg",
+      "PackagePath": "staticwebassets\\uploads\\krapiva_-polza-i-vred-dlya-organizma-960x540.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\myata-960x540.jpg",
+      "PackagePath": "staticwebassets\\uploads\\myata-960x540.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\shalfej-polza-i-vred-dlya-zdorovya-cheloveka-960x540.jpg",
+      "PackagePath": "staticwebassets\\uploads\\shalfej-polza-i-vred-dlya-zdorovya-cheloveka-960x540.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\top-oduvanchik-polza-i-vred-960x540-2-960x540.jpg",
+      "PackagePath": "staticwebassets\\uploads\\top-oduvanchik-polza-i-vred-960x540-2-960x540.jpg"
+    },
+    {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\top-v-rastoropsha-polza-i-vred-960x540-1-560x420.jpg",
       "PackagePath": "staticwebassets\\uploads\\top-v-rastoropsha-polza-i-vred-960x540-1-560x420.jpg"
     },
     {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\verbes-provence.jpg",
       "PackagePath": "staticwebassets\\uploads\\verbes-provence.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\uploads\\zveroboj-960x540.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zveroboj-960x540.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Ctulhu.Microsoft.AspNetCore.StaticWebAssets.props",

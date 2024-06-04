@@ -6,6 +6,7 @@
     const cancelButton = document.getElementById("cancelButton");
     const createPostForm = document.getElementById('createPostForm');
     const createButton = document.getElementById('createButton');
+    const titleInput = createPostForm.elements['title'];
 
     createPostButton.onclick = function () {
         modal.style.display = "block";
@@ -29,13 +30,22 @@
     }
 
     createPostForm.addEventListener('submit', function (event) {
-        var title = createPostForm.elements['title'].value;
+        var title = titleInput.value;
         var description = createPostForm.elements['description'].value;
         var image = createPostForm.elements['image'].files[0];
         var tag = Array.from(createPostForm.elements['tag']).some(radio => radio.checked);
 
+        if (title.length > 20) {
+            event.preventDefault();
+            error.textContent = "Заголовок не может быть длиннее 20 символов";
+            error.style.display = "block";
+            modal.style.display = "block";
+            return;
+        }
+
         if (!title || !description || !image || !tag) {
             event.preventDefault();
+            error.textContent = "Все поля должны быть заполнены";
             error.style.display = "block";
             modal.style.display = "block";
         }

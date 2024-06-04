@@ -171,15 +171,19 @@ namespace Ctulhu.Controllers
             return View(model);
         }
         [HttpGet]
-        public async Task<IActionResult> GetPosts()
+        public async Task<IActionResult> GetPost(int id)
         {
-            var posts = await _context._posts.Select(p => new
+            var post = await _context._posts.Where(p => p.ID == id).Select(p => new
             {
-                p.ID,
                 p.CreatedAt
-            }).ToListAsync();
+            }).FirstOrDefaultAsync();
 
-            return Json(posts);
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            return Json(post);
         }
 
         [HttpPost]
@@ -205,6 +209,99 @@ namespace Ctulhu.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Post", new { id = postId });
+        }
+
+        [HttpPost]
+        public IActionResult DeleteComment(int postId, int commentId)
+        {
+            var commentToDelete = _context._comments.FirstOrDefault(c => c.ID == commentId);
+
+            if (commentToDelete == null)
+            {
+                return NotFound();
+            }
+            var user = _context._users.FirstOrDefault(u => u.Login == User.Identity.Name);
+
+            if (commentToDelete != null && (User.IsInRole("admin") || commentToDelete.Author == user.Login))
+            {
+                _context._comments.Remove(commentToDelete);
+                _context.SaveChanges();
+                return RedirectToAction("Post", new { id = postId });
+            }
+            return Unauthorized(new { message = "У вас недостаточно прав, чтобы удалить этот комментарий" });
+        }
+
+        public async Task<IActionResult> Recipes()
+        {
+            var users = await _context._users.ToListAsync();
+            var tags = await _context._tag.ToListAsync();
+            var tag = await _context._tag.FirstOrDefaultAsync(t => t.Name == "Рецепты");
+            var posts = await _context._posts
+                .Where(p => p.Tag == tag.Name && p.IsApproved)
+                .ToListAsync();
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags };
+            ViewBag.CurrentTagName = tag.Name;
+            return View(model);
+        }
+        public async Task<IActionResult> Tinctures()
+        {
+            var users = await _context._users.ToListAsync();
+            var tags = await _context._tag.ToListAsync();
+            var tag = await _context._tag.FirstOrDefaultAsync(t => t.Name == "Настойки");
+            var posts = await _context._posts
+                .Where(p => p.Tag == tag.Name && p.IsApproved)
+                .ToListAsync();
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags };
+            ViewBag.CurrentTagName = tag.Name;
+            return View(model);
+        }
+        public async Task<IActionResult> Potions()
+        {
+            var users = await _context._users.ToListAsync();
+            var tags = await _context._tag.ToListAsync();
+            var tag = await _context._tag.FirstOrDefaultAsync(t => t.Name == "Зелья");
+            var posts = await _context._posts
+                .Where(p => p.Tag == tag.Name && p.IsApproved)
+                .ToListAsync();
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags };
+            ViewBag.CurrentTagName = tag.Name;
+            return View(model);
+        }
+        public async Task<IActionResult> Medicines()
+        {
+            var users = await _context._users.ToListAsync();
+            var tags = await _context._tag.ToListAsync();
+            var tag = await _context._tag.FirstOrDefaultAsync(t => t.Name == "Зелья");
+            var posts = await _context._posts
+                .Where(p => p.Tag == tag.Name && p.IsApproved)
+                .ToListAsync();
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags };
+            ViewBag.CurrentTagName = tag.Name;
+            return View(model);
+        }
+        public async Task<IActionResult> Articles()
+        {
+            var users = await _context._users.ToListAsync();
+            var tags = await _context._tag.ToListAsync();
+            var tag = await _context._tag.FirstOrDefaultAsync(t => t.Name == "Полезные статьи");
+            var posts = await _context._posts
+                .Where(p => p.Tag == tag.Name && p.IsApproved)
+                .ToListAsync();
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags };
+            ViewBag.CurrentTagName = tag.Name;
+            return View(model);
+        }
+        public async Task<IActionResult> Blog()
+        {
+            var users = await _context._users.ToListAsync();
+            var tags = await _context._tag.ToListAsync();
+            var tag = await _context._tag.FirstOrDefaultAsync(t => t.Name == "Блог");
+            var posts = await _context._posts
+                .Where(p => p.Tag == tag.Name && p.IsApproved)
+                .ToListAsync();
+            var model = new UserPosts { Users = users, Posts = posts, Tags = tags };
+            ViewBag.CurrentTagName = tag.Name;
+            return View(model);
         }
     }
 }

@@ -6,31 +6,21 @@
         <div>
             <label asp-for="Login">Логин</label>
             <input asp-for="Login" />
-            <span asp-validation-for="Login" class="text-danger"></span>
         </div>
         <div>
             <label asp-for="Email">Email</label>
             <input asp-for="Email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         <div>
             <label asp-for="Password">Пароль</label>
             <input asp-for="Password" type="password" />
-            <span asp-validation-for="Password" class="text-danger"></span>
         </div>
         <div>
             <label asp-for="ConfirmPassword">Подтверждение пароля</label>
             <input asp-for="ConfirmPassword" type="password" />
-            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
         </div>
         <button type="submit">Зарегистрироваться</button>
     </form>
 
     <p>Уже зарегистрированы? <a href="@Url.Action("Login", "Login")">Войти</a></p>
 </div>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}

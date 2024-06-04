@@ -87,7 +87,7 @@ footer {
     width: 100%;
     background: rgba(66, 61, 61, 0.192);
     backdrop-filter: blur(10px);
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     color: #FFF;
     font-size: 12px;
@@ -145,8 +145,123 @@ header {
 }
 
 .auth {
-    position: absolute;
-    left: 40%;
+    width: 80%;
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth label {
+    display: block;
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+
+.auth input {
+    width: 80%;
+    margin-left: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.auth button {
+    width: 40%;
+    margin-left: 280px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    }
+
+.auth button:hover {
+    background-color: #45a049;
+}
+
+.auth p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth a:hover {
+    text-decoration: underline;
+}
+
+.login-auth {
+    width: 80%;
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.login-auth h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-auth label {
+    display: block;
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+
+.login-auth input {
+    width: 80%;
+    margin-left: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.login-auth button {
+    width: 40%;
+    margin-left: 280px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-auth button:hover {
+    background-color: #45a049;
+}
+
+.login-auth p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-auth a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-auth a:hover {
+    text-decoration: underline;
 }
 
 .admin-panel {
@@ -227,6 +342,10 @@ header {
 
 .btn.red {
     background-color: red;
+}
+
+.green {
+    background-color: green;
 }
 
 .posts-container,
@@ -599,9 +718,9 @@ header {
     color: #333;
 }
 
-    .post .cancel-button:hover {
-        background-color: #e0e0e0;
-    }
+.post .cancel-button:hover {
+    background-color: #e0e0e0;
+}
 
 .tag-selector {
     display: flex;
@@ -713,9 +832,11 @@ header {
 }
 
 .unique-post-image {
-    max-width: 100%;
+    width: 1100px;
     height: auto;
+    margin: 5px;
     margin-top: 10px;
+    max-height: 600px
 }
 
 .unique-comments-section {
@@ -866,6 +987,7 @@ header {
 
 .user-post {
     width: calc(50% - 20px);
+    height: 210px;
     box-sizing: border-box;
     padding: 15px;
     border: 1px solid #ddd;
@@ -914,4 +1036,21 @@ header {
 
 .btn-menu {
     cursor: pointer;
+}
+
+.delete-comment-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    float: right;
+    clear: both;
+    margin-top: -80px;
+}
+
+.delete-comment-btn:hover {
+    opacity: 0.8;
 }

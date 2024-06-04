@@ -56,17 +56,10 @@
                 <a asp-action="Post" asp-controller="Home" asp-route-id="@post.ID" style="text-decoration: none; color: black;">
                     <h3>@post.Title</h3>
                 </a>
-                <p>@post.Description</p>
+                <p>@(post.Description.Length > 150 ? post.Description.Substring(0, 150) + "..." : post.Description)</p>
                 <small>Создан: @post.CreatedAt</small>
                 <small>Тег: @post.Tag</small>
                 <small>Автор: @post.Author</small>
-                @if (User.IsInRole("admin") || User.Identity.Name == post.Author)
-                {   
-                    <div class="dropdown">
-                        <button class="edit-post-btn" data-id="@post.ID">Редактировать</button>
-                        <button class="delete-post-btn" data-id="@post.ID">Удалить</button>
-                    </div>
-                }
             </div>
         }
         @if (!Model.Posts.Any())

@@ -25,6 +25,7 @@ namespace Ctulhu.Models
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Заголовок обязателен")]
+        [MaxLength(20, ErrorMessage = "Заголовок не может быть длиннее 20 символов")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Описание обязательно")]

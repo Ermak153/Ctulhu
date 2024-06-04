@@ -5,5 +5,6 @@
         public List<Users> Users { get; set; }
         public List<Posts> Posts { get; set; }
         public List<Tag> Tags { get; set; }
+        public string CurrentTag { get; set; }
     }
 }

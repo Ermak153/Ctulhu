@@ -3,26 +3,32 @@
 <div class="admin-panel">
     <h1>Панель администратора</h1>
     <form action="@Url.Action("Users", "Admin")" method="get">
-        <button type="submit">Перейти в панель управления пользователями</button>
+        <button class="admin-btn" style="width: 50%" type="submit">Перейти в панель управления пользователями</button>
     </form>
-    <div class="post1-list">
+    <div class="posts-container">
         @foreach (var post in Model)
         {
-            <div class="post1">
-                <h2>@post.Title</h2>
-                <p>@post.Description</p>
-                <p>Тег: @post.Tag</p>
-                <p>Автор: @post.Author</p>
-                <div class="actions">
-                    <form asp-action="Approve" method="post">
-                        <input type="hidden" name="id" value="@post.ID" />
-                        <button type="submit">Одобрить</button>
-                    </form>
-                    <form asp-action="Reject" method="post">
-                        <input type="hidden" name="id" value="@post.ID" />
-                        <button type="submit">Отклонить</button>
-                    </form>
-                    <a asp-action="EditPost" asp-route-id="@post.ID">Редактировать</a>
+            <div class="post">
+                <div class="post-image">
+                    <img src="@post.ImageUrl" alt="@post.Title" />
+                </div>
+                <div class="post-content">
+                    <a asp-action="Post" asp-controller="Home" asp-route-id="@post.ID" style="text-decoration: none; color: black;" class="post-link">
+                        <h2>@post.Title</h2>
+                        <p>@(post.Description.Length > 50 ? post.Description.Substring(0, 50) + "..." : post.Description)</p>
+                        <small>Автор: @post.Author</small>
+                        <small>Тег: @post.Tag</small>
+                    </a>
+                    <div class="actions">
+                        <form asp-action="Approve" method="post">
+                            <input type="hidden" name="id" value="@post.ID" />
+                            <button type="submit">Одобрить</button>
+                        </form>
+                        <form asp-action="Reject" method="post">
+                            <input type="hidden" name="id" value="@post.ID" />
+                            <button type="submit">Отклонить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         }

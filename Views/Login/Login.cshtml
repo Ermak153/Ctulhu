@@ -1,25 +1,18 @@
 ﻿@model Ctulhu.Models.Login
 
-<div class="auth">
+<div class="login-auth">
     <h1>Страница входа</h1>
     <form asp-action="Login" method="post">
-        <div asp-validation-summary="All" class="text-danger"></div>
-
         <label>Логин</label>
-        <input type="text" class="textboxes" asp-for="Username" />
-        <span asp-validation-for="Username" class="text-danger"></span>
+        <input type="text" asp-for="Username" />
+        <span asp-validation-for="Username"></span>
         <br>
         <label>Пароль</label>
-        <input type="password" class="textboxes" asp-for="Password" />
-        <span asp-validation-for="Password" class="text-danger"></span>
+        <input type="password" asp-for="Password" />
+        <span asp-validation-for="Password"></span>
         <br>
         <button type="submit">Войти</button>
     </form>
 
     <p>Ещё нет аккаунта? <a href="@Url.Action("Registration", "Login")">Зарегистрироваться</a></p>
 </div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-
-}

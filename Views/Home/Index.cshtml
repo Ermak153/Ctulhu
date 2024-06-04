@@ -77,7 +77,7 @@
     <div class="posts-container">
         @foreach (var post in Model.Posts)
         {
-            <section id="@post.ID" class="post" data-post-id="@post.ID">
+            <section id="@post.ID" class="post" data-post-id="@post.ID" data-full-description="@post.Description">
                 @if (User.IsInRole("admin") || User.Identity.Name == post.Author)
                 {
                     <button class="menu-button">⋮</button>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="post-content">
                     <h2>@post.Title</h2>
-                    <p>@post.Description</p>
+                    <p>@(post.Description.Length > 150 ? post.Description.Substring(0, 150) + "..." : post.Description)</p>
                     <div style="display: flex; justify-content: space-between">
                         <small>Тег: @post.Tag</small>
                         <small>Автор: @post.Author</small>
