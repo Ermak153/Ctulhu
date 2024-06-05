@@ -11,7 +11,6 @@ namespace Ctulhu.BaseContext
         public DbSet<Comment> _comments { get; set; }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
     }

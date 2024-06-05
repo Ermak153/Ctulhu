@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\filter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\filter.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\wwwroot\\script\\searchauth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:wwwroot\\script\\searchauth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\basecontext\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:basecontext\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\views\\admin\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:views\\admin\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\filters\\redirectauthenticateduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:filters\\redirectauthenticateduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|c:\\users\\ermak\\source\\repos\\ctulhu\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA876BE-0336-4F7B-B978-8C98A78F819E}|Ctulhu.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 88,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +50,106 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Users.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T06:08:19.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAA4AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T06:07:45.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Admin.cshtml",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Admin\\Admin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Admin.cshtml",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Views\\Admin\\Admin.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Admin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T06:07:40.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "filter.js",
-              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\filter.js",
-              "RelativeDocumentMoniker": "wwwroot\\script\\filter.js",
-              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\filter.js",
-              "RelativeToolTip": "wwwroot\\script\\filter.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-05T04:21:46.682Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T06:07:02.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RedirectAuthenticatedUser.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Filters\\RedirectAuthenticatedUser.cs",
+              "RelativeDocumentMoniker": "Filters\\RedirectAuthenticatedUser.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Filters\\RedirectAuthenticatedUser.cs",
+              "RelativeToolTip": "Filters\\RedirectAuthenticatedUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T06:06:54.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T06:06:22.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "searchauth.js",
-              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchauth.js",
-              "RelativeDocumentMoniker": "wwwroot\\script\\searchauth.js",
-              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\searchauth.js",
-              "RelativeToolTip": "wwwroot\\script\\searchauth.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-06-05T04:21:39.415Z",
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\BaseContext\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "BaseContext\\ApplicationContext.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\BaseContext\\ApplicationContext.cs",
+              "RelativeToolTip": "BaseContext\\ApplicationContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T06:05:29.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAkwHEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T06:05:35.911Z",
               "EditorCaption": ""
             }
           ]
