@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\img\\backimg.jpg"
     },
     {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\github-logo.png",
+      "PackagePath": "staticwebassets\\img\\github-logo.png"
+    },
+    {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\icon.png",
       "PackagePath": "staticwebassets\\img\\icon.png"
     },
@@ -43,6 +47,10 @@
     {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editscript.js",
       "PackagePath": "staticwebassets\\script\\editscript.js"
+    },
+    {
+      "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editusers.js",
+      "PackagePath": "staticwebassets\\script\\editusers.js"
     },
     {
       "Id": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\filter.js",

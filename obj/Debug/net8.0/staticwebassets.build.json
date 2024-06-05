@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7J480FX7yojtQxhyl2BXeV8MUkvDiARDGCPVUWqF9LY=",
+  "Hash": "CLoO+IIxMenRQpqbp2CQO65Q57fDwAJEtrmXT6gCGk8=",
   "Source": "Ctulhu",
   "BasePath": "_content/Ctulhu",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\backimg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\github-logo.png",
+      "SourceId": "Ctulhu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\",
+      "BasePath": "_content/Ctulhu",
+      "RelativePath": "img/github-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\github-logo.png"
     },
     {
       "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\img\\icon.png",
@@ -224,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script\\editscript.js"
+    },
+    {
+      "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\editusers.js",
+      "SourceId": "Ctulhu",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\",
+      "BasePath": "_content/Ctulhu",
+      "RelativePath": "script/editusers.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script\\editusers.js"
     },
     {
       "Identity": "C:\\Users\\ermak\\source\\repos\\Ctulhu\\wwwroot\\script\\filter.js",

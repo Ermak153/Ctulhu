@@ -16,9 +16,11 @@
 
     cancelFilterButton.onclick = () => {
         filterModal.style.display = "none";
+
         filterForm.reset();
         postsContainer.querySelectorAll(".post").forEach(post => {
-            post.style.display = "block";
+            post.style.visibility = "visible";
+            post.style.position = "static";
         });
     }
 
@@ -50,7 +52,8 @@
                     const postCreatedAt = new Date(data.createdAt);
 
                     if (selectedTags.length > 0 && !selectedTags.includes(postTag)) {
-                        post.style.display = "none";
+                        post.style.visibility = "hidden";
+                        post.style.position = "absolute";
                         return;
                     }
 
@@ -70,11 +73,13 @@
                             break;
                     }
                     if (!isDateMatch) {
-                        post.style.display = "none";
+                        post.style.visibility = "hidden";
+                        post.style.position = "absolute";
                         return;
                     }
 
-                    post.style.display = "block";
+                    post.style.visibility = "visible";
+                    post.style.position = "static";
                 })
                 .catch(error => {
                     console.error("Ошибка при получении даты создания поста:", error);
